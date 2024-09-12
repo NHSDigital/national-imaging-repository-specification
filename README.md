@@ -1,1 +1,1 @@
-See [Interoperability Standards DDD Sandbox](https://nhsdigital.github.io/interoperabilty-standard-domain-driven-design-sandbox/)
+See [National Imaging Repository](https://nhsdigital.github.io/national-imaging-repository-specification/)
