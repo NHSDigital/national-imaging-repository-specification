@@ -1,9 +1,3 @@
-/_gencontinuous.bat
-/_gencontinuous.sh
-/_genonce.bat
-/_genonce.sh
-/_updatePublisher.bat
-/_updatePublisher.sh
 /input-cache/
 /output/
 /temp/
