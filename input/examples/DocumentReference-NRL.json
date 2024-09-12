@@ -1,0 +1,66 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "docuement-reference-nrl",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/Sandbox/DDD/England/StructureDefinition/DocumentIndex"
+    ]
+  },
+  "status" : "current",
+  "type": {
+    "coding": [
+      {
+        "system": "https://nicip.nhs.uk",
+        "code": "MAULR",
+        "display": "MRA Upper limb Rt"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "721981007",
+          "display": "Diagnostic studies report"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/nhs-number",
+      "value": "9000000009"
+    }
+  },
+  "custodian": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+      "value": "Y05868"
+    },
+    "display" : "LEEDS TEACHING HOSPITALS NHS TRUST"
+  },
+  "content":[
+    {
+      "attachment": {
+        "contentType": "application/fhir+json",
+        "url": "https://an-ris-system.org.nhs.uk/some-path/FHIR/R4/DiagnosticReport?_id=c9d0e5e3-ac48-4285-8f9c-af9b30d235f1",
+        "title" : "Diagnostic Studies Report",
+        "creation" : "2023-10-22T09:31:45+00:00"
+      },
+      "format": {
+        "code": "apiplatform",
+        "display": "API Platform"
+      }
+    }]
+  ,
+  "context" : {
+    "related" : [{
+      "type" : "HL7V2#ACSN",
+      "identifier" : {
+          "system": "https://acme.org.nhs.uk/Id/AccessionNumber",
+        "value" : "123456789"
+      }
+    }]
+  }
+}

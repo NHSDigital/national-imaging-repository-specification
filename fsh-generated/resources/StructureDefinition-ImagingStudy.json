@@ -1,0 +1,24 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImagingStudy",
+  "url": "https://fhir.nhs.uk/NIR/StructureDefinition/ImagingStudy",
+  "name": "ImagingStudy",
+  "title": "NHS England ImagingStudy",
+  "status": "draft",
+  "description": "NHS England ImagingStudy Entity Model, based on data model [IHE Interactive Multimedia Report (IMR) ImagingStudy](https://build.fhir.org/ig/IHE/RAD.IMR/branches/master/StructureDefinition-imr-imagingstudy.html)",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImagingStudy",
+  "baseDefinition": "https://profiles.ihe.net/RAD/IMR/StructureDefinition/imr-imagingstudy",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImagingStudy.identifier",
+        "path": "ImagingStudy.identifier",
+        "mustSupport": true
+      }
+    ]
+  }
+}

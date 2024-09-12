@@ -1,0 +1,9 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "Specialty",
+  "id": "specialty",
+  "title": "Specialty",
+  "description": "- [MAIN SPECIALTY CODE](https://www.datadictionary.nhs.uk/attributes/main_specialty_code.html)\n- [UKCorePracticeSettingCode](https://simplifier.net/hl7fhirukcorer4/valueset-ukcore-practicesettingcode)",
+  "url": "https://fhir.nhs.uk/NIR/ValueSet/specialty"
+}

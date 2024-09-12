@@ -1,0 +1,9 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "FacilityType",
+  "id": "facility-type",
+  "title": "Facility Type",
+  "description": "[ACTIVITY LOCATION TYPE CODE](https://www.datadictionary.nhs.uk/data_elements/activity_location_type_code.html)",
+  "url": "https://fhir.nhs.uk/NIR/ValueSet/facility-type"
+}

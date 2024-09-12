@@ -1,0 +1,146 @@
+[
+  {
+    "outputFile": "StructureDefinition-DiagnosticReport.json",
+    "fshName": "DiagnosticReport",
+    "fshType": "Profile",
+    "fshFile": "DiagnosticReport.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-Document.json",
+    "fshName": "Document",
+    "fshType": "Profile",
+    "fshFile": "Document.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-DocumentIndex.json",
+    "fshName": "DocumentIndex",
+    "fshType": "Profile",
+    "fshFile": "DocumentIndex.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "StructureDefinition-Image.json",
+    "fshName": "Image",
+    "fshType": "Profile",
+    "fshFile": "Image.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-ImagingStudy.json",
+    "fshName": "ImagingStudy",
+    "fshType": "Profile",
+    "fshFile": "ImagingStudy.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "StructureDefinition-ServiceRequest-Radiology.json",
+    "fshName": "ServiceRequest",
+    "fshType": "Profile",
+    "fshFile": "ServiceRequest.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-admission-method.json",
+    "fshName": "AdmissionMethod",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/AdmissionMethod.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-admission-source.json",
+    "fshName": "AdmissionSource",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/AdmissionSource.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-discharge-destination.json",
+    "fshName": "DischargeDestination",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/DischargeDestination.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-discharge-disposition.json",
+    "fshName": "DischargeDisposition",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/DischargeDisposition.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-document-index-class.json",
+    "fshName": "DocumentIndexClass",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/DocumentIndex.class.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-document-index-type.json",
+    "fshName": "DocumentIndexType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/DocumentIndex.type.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-facility-type.json",
+    "fshName": "FacilityType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/FacilityType.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-organisation-type.json",
+    "fshName": "OrganisationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/OrganisationType.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-practitioner-role-code.json",
+    "fshName": "PractitionerRoleCode",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/PractitionerRoleCode.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-service-provision-code.json",
+    "fshName": "ServiceProvisionCode",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/ServiceProvisionCode.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-service.json",
+    "fshName": "Service",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/Service.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-specialty.json",
+    "fshName": "Specialty",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet/Specialty.fsh",
+    "startLine": 1,
+    "endLine": 4
+  }
+]
