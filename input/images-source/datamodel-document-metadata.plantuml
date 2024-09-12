@@ -1,0 +1,70 @@
+@startuml
+
+entity "Patient" as pat {
+  id
+  NHS Number : 0..1 Identifier
+  Medical Record Numbers : 0..* Identifier
+  Name
+}
+
+entity "Document Metadata" as document {
+  subject : Patient.id
+  category : CodeableConcept
+  type: CodeableConcept
+  context.practiceSetting: CodeableConcept
+  context.period : Period
+}
+
+json "Practice Setting Examples" as PracticeSetting {
+   "100":"General Surgery Service",
+   "300":"General Internal Medicine",
+   "348": "Post-COVID-19 Syndrome Service",
+   "920":"Diabetic Education Service"
+}
+note as N4
+[[https://www.datadictionary.nhs.uk/attributes/treatment_function_code.html NHS Data Dictionary\nTREATMENT FUNCTION CODE]]
+[[https://www.datadictionary.nhs.uk/attributes/main_specialty_code.html or MAIN SPECIALTY CODE]]
+end note
+N4 .u. PracticeSetting
+
+json "Medical Record Number Examples" as MedicalRecordNumbers {
+   "Leeds Teaching Trust MRN":"ABC",
+   "Mid Yorks MRN":"12345",
+   "Calderdale and Huddersfield MRN":"xyz1234"
+}
+note as N2
+Patient Identifiers
+end note
+N2 .u. MedicalRecordNumbers
+
+json "Category Examples" as Category {
+  "721927009":"Referral note",
+  "721963009":"Order",
+  "734163000":"Care plan",
+  "371531000":"Report of clinical encounter",
+  "422735006":"Summary clinical document"
+}
+note as N1
+Document Category
+end note
+N1 .u. Category
+
+json "Type Examples" as Type {
+  "4241000179101":"Laboratory report",
+  "721912009":"Medication summary document",
+  "373942005":"Discharge Summary",
+  "736377005":"Maternity Care Plan",
+  "736253002":"Mental health crisis plan"
+}
+note as N3
+Document Type
+end note
+N3 .u. Type
+
+pat  --o "subject" document
+pat "Medical Record Numbers" --o MedicalRecordNumbers
+document "PracticeSetting" --o PracticeSetting
+document "category" --o Category
+document "type" --o Type
+
+@enduml
