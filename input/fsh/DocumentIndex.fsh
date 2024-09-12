@@ -27,3 +27,7 @@ Description:    " "
 * context.related[accession].identifier.system ^short = "uri should be defined and unique supplying organisation."
 * context.related[accession].identifier.value 1..1
 
+* subject.identifier 1..1
+* subject.identifier.system 1..1
+* subject.identifier.value 1..1
+

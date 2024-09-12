@@ -4,7 +4,7 @@
   "meta" : {
     "versionId": "1.0",
     "profile": [
-      "https://fhir.nhs.uk/Sandbox/DDD/England/StructureDefinition/DiagnosticReport"
+      "https://fhir.nhs.uk/NIR/StructureDefinition/DiagnosticReport"
     ]
   },
   "status": "final",

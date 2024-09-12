@@ -20,3 +20,7 @@ Description:    "NHS England DiagnosticReport Entity Model, based on data model 
 * basedOn[accession].identifier.system 1..1
 * basedOn[accession].identifier.system ^short = "uri should be defined and unique supplying organisation."
 * basedOn[accession].identifier.value 1..1
+
+* subject.identifier 1..1
+* subject.identifier.system 1..1
+* subject.identifier.value 1..1
