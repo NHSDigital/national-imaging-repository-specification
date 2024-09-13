@@ -61,7 +61,7 @@ The HL7 FHIR mapping uses identifiers for Patient, Practitioner and Organisation
 To aid with the use of UK SNOMED CT and other terminology, the [Terminology Server](https://digital.nhs.uk/services/terminology-server) is recommended
 
 <figure>
-{%include component-directory-requirements.svg%}
+{%include component-assumptions.svg%}
 <p id="fX.X.X.X-X" class="figureTitle">Suggested Terminology and Directory Services</p>
 </figure>
 <br clear="all">
