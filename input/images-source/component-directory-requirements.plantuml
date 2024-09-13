@@ -1,0 +1,45 @@
+@startuml
+
+
+
+package patientAdminisrtration as "Patient Administration" {
+  component "[[https://digital.nhs.uk/services/personal-demographics-service PatientDemographicsService]]" as PatientDemographicsService
+  interface "[[https://profiles.ihe.net/ITI/PDQm/ITI-78.html IHE PDQm\nITI ITI-78]] " as PDQm
+
+  PDQm -r-> PatientDemographicsService
+}
+
+
+package directories as "Care Directories" {
+  component "[[https://digital.nhs.uk/services/organisation-data-service OrganisationService]]" as OrganisationService
+
+  component PractitionerRegistry
+  note right
+  e.g. Healthcare Worker API
+  end note
+
+  component PractitionerRoleRegistry
+  note right
+  e.g. Healthcare Worker API
+  end note
+
+  interface "[[https://profiles.ihe.net/ITI/mCSD/ITI-90.html IHE mCSD\nITI-90]]" as ITI90Org
+  interface "[[https://profiles.ihe.net/ITI/mCSD/ITI-90.html IHE mCSD\nITI-90]]" as ITI90Prac
+  interface "[[https://profiles.ihe.net/ITI/mCSD/ITI-90.html IHE mCSD\nITI-90]]" as ITI90PracRole
+
+  ITI90Org -r-> OrganisationService : Organization
+  ITI90Prac -r-> PractitionerRegistry: Practitioner
+  ITI90PracRole -r-> PractitionerRoleRegistry: PractitionerRole
+
+  OrganisationService -d[hidden]- PractitionerRegistry
+  PractitionerRegistry -d[hidden]- PractitionerRoleRegistry
+}
+
+package Terminology {
+ component "[[https://digital.nhs.uk/services/terminology-server TerminologyService]]" as TerminologyService
+}
+
+PatientDemographicsService -d[hidden]- OrganisationService
+
+
+@enduml

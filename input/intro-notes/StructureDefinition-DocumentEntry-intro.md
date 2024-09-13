@@ -118,6 +118,22 @@ NHS England is probably creating a new CodeSystem on the Ontology Server
 
 **Note this probably requires a ConceptMap**
 
+## Assumptions
+
+The HL7 FHIR mapping uses identifiers for Patient, Practitioner and Organisation, if details of these entities are required, the following services can be used:
+
+- [Personal Demographics Service (PDS)](https://digital.nhs.uk/services/personal-demographics-service)
+- [Organisation Data Service (ODS)](https://digital.nhs.uk/services/organisation-data-service)
+- **Healthcare Worker API** (in development)
+
+To aid with the use of UK SNOMED CT and other terminology, the [Terminology Server](https://digital.nhs.uk/services/terminology-server) is recommended
+
+<figure>
+{%include component-directory-requirements.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Suggested Terminology and Directory Services</p>
+</figure>
+<br clear="all">
+
 
 
 
