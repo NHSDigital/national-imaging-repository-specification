@@ -50,8 +50,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * performer[organisation].identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
 * performer[organisation].type = "Organization"
 * performer[operator].type = "Practitioner"
-* performer[operator].extension[performerFunction].valueCodeableConcept ^short = "test"
-// .coding[0] = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
+* performer[operator].extension[performerFunction].valueCodeableConcept.coding[0] = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
 
 * resultsInterpreter.identifier 1..1
 * resultsInterpreter.identifier.system 1..1
