@@ -1,7 +1,7 @@
-Profile:        DiagnosticReport
+Profile:        RadiologyDiagnosticReport
 Parent:         http://hl7.org/fhir/StructureDefinition/DiagnosticReport
-Id:             DiagnosticReport
-Title:          "Diagnostic Report"
+Id:             RadiologyDiagnosticReport
+Title:          "Radiology Diagnostic Report"
 Description:    """
 DiagnosticReport based on
 
@@ -19,15 +19,18 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * basedOn ^slicing.description = "Slice based on the type"
 * basedOn ^slicing.ordered = false
 * basedOn contains
-  accession 0..1 MS
+  accessionNumber 0..1 MS
 
-* basedOn[accession] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
-* basedOn[accession].type 1..1 MS
-* basedOn[accession].type = "ServiceRequest"
-* basedOn[accession].identifier 1..1
-* basedOn[accession].identifier.system 1..1
-* basedOn[accession].identifier.system ^short = "uri should be defined and unique supplying organisation."
-* basedOn[accession].identifier.value 1..1
+* code from ImagingCodeNICIP (preferred)
+* category from Modality (preferred)
+
+* basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
+* basedOn[accessionNumber].type 1..1 MS
+* basedOn[accessionNumber].type = "ServiceRequest"
+* basedOn[accessionNumber].identifier 1..1
+* basedOn[accessionNumber].identifier.system 1..1
+* basedOn[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
+* basedOn[accessionNumber].identifier.value 1..1
 
 * subject.identifier 1..1
 * subject.identifier.system 1..1

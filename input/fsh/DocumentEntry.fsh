@@ -27,13 +27,13 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.related ^slicing.ordered = false
 
 * context.related contains
-  accession 1..1 MS
-* context.related[accession].type 1..1 MS
-* context.related[accession].type = "ServiceRequest"
-* context.related[accession].identifier 1..1
-* context.related[accession].identifier.system 1..1
-* context.related[accession].identifier.system ^short = "uri should be defined and unique supplying organisation."
-* context.related[accession].identifier.value 1..1
+  accessionNumber 1..1 MS
+* context.related[accessionNumber].type 1..1 MS
+* context.related[accessionNumber].type = "ServiceRequest"
+* context.related[accessionNumber].identifier 1..1
+* context.related[accessionNumber].identifier.system 1..1
+* context.related[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
+* context.related[accessionNumber].identifier.value 1..1
 
 * subject.identifier 1..1
 * subject.identifier.system 1..1
