@@ -44,7 +44,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * performer ^slicing.rules = #open
 * performer ^slicing.description = "Slice based on the type"
 * performer ^slicing.ordered = false
-* basedOn contains
+* performer contains
   organisation 1..1 and operator 0..*
 
 * performer[organisation].identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
