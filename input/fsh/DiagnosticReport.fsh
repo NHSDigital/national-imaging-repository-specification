@@ -26,4 +26,4 @@ Description:    "NHS England DiagnosticReport Entity Model, based on data model 
 * subject.identifier.value 1..1
 
 * performer.extension contains
-      http://hl7.org/fhir/StructureDefinition/event-performerFunction named performerType 0..1
+      http://hl7.org/fhir/StructureDefinition/event-performerFunction named performerFunction 0..1
