@@ -1,0 +1,100 @@
+@startuml
+
+skinparam svgDimensionStyle false
+
+package healthdocuments as "Health Documents" {
+
+  entity "[[StructureDefinition-DocumentEntry.html Document Entry]]" as document  <<aggregate root>>  {
+    identifier
+    subject : PatientIdentifier
+    custodian:OrganisationIdentifier
+    author:  OrganisationIdentifier or PractitionerIdentifier
+    category: DocumentClass
+    type: DocumentType
+    facilityType: [[ValueSet-facility-type.html FacilityType]]
+    practiceSetting: [[ValueSet-specialty.html Specialty]]
+    period : Period
+    encounter: EncounterIdentifier
+    attachment : Attachment
+    related: ServiceRequestIdentifier
+  }
+
+  entity "Attachment" as attachment <<entity>> {
+    url
+    }
+
+  entity "[[StructureDefinition-Document.html Document]]" as Document <<entity>> {
+  }
+  entity "[[StructureDefinition-Image.html Image]]" as image <<entity>> {
+  }
+
+  class "[[ValueSet-document-entry-class.html DocumentClass]]" as DocumentClass <<value>> {
+    }
+
+  class "[[ValueSet-document-entry-type.html DocumentType]]" as DocumentType <<value>> {
+
+  }
+
+
+    DocumentClass -d-> DocumentType : parent of
+
+}
+
+
+package Workflow {
+  class ServiceRequestIdentifier {
+    identifier : Accession Number
+  }
+}
+
+package PatientAdministration as "Patient Administration" {
+
+
+
+  class PatientIdentifier <<value>> {
+    id
+    identifier: [[https://www.datadictionary.nhs.uk/data_elements/nhs_number.html NHS Number]]
+  }
+
+
+
+  class EncounterIdentifier <<value>> {
+    identifier
+  }
+
+  PatientIdentifier -d[hidden]- EncounterIdentifier
+}
+
+
+package directories as "Care Directories" {
+
+class OrganisationIdentifier <<value>> {
+  identifier: [[https://www.datadictionary.nhs.uk/attributes/organisation_code.html ORGANISATION CODE]]
+}
+
+class PractitionerIdentifier <<value>>  {
+id: SDS User Id [NHS E internal use only until API available?]
+identifier: GMP, GMC, HCPC, NMC, etc [[https://www.datadictionary.nhs.uk/data_elements/consultant_code.html CONSULTANT CODE]]
+}
+
+  OrganisationIdentifier -d[hidden]- PractitionerIdentifier
+
+}
+
+
+
+  document o--> DocumentClass
+  document o--> DocumentType
+  document o--> attachment
+
+  attachment --> Document : url
+   attachment --> image : url
+
+document -d-> PatientIdentifier : subject
+  document o--> EncounterIdentifier: encounter
+  document o-d-> OrganisationIdentifier : custodian and author
+  document o--> PractitionerIdentifier: author
+  document o--> ServiceRequestIdentifier: related
+
+
+@enduml

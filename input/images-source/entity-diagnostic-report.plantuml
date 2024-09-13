@@ -1,0 +1,88 @@
+@startuml
+
+skinparam svgDimensionStyle false
+
+package healthdocuments as "Radiology" {
+
+  entity "[[StructureDefinition-DiagnosticReport.html Diagnostic Report]]" as diagnosticReport  <<aggregate root>>  {
+    identifier
+    subject : PatientIdentifier
+    performer [organisation] :OrganisationIdentifier
+    performer [primary reporter]:   PractitionerIdentifier
+    performer [secondary reporter]:   PractitionerIdentifier
+    performer [technician]:   PractitionerIdentifier
+    category: [[https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html Modality]]
+    code: [[https://www.datadictionary.nhs.uk/data_elements/imaging_code__nicip_.html IMAGING CODE (NICIP)]]
+    effectiveDateTime
+    encounter: EncounterIdentifier
+    attachment : Attachment
+    basedOn: ServiceRequestIdentifier
+  }
+
+  entity "Attachment" as attachment <<entity>> {
+    url
+    data
+    }
+
+  entity "[[StructureDefinition-Document.html Document]]" as Document <<entity>> {
+  }
+
+
+
+}
+
+
+package Workflow {
+  class ServiceRequestIdentifier {
+    identifier : Accession Number
+  }
+}
+
+package PatientAdministration as "Patient Administration" {
+
+
+
+  class PatientIdentifier <<value>> {
+    id
+    identifier: [[https://www.datadictionary.nhs.uk/data_elements/nhs_number.html NHS Number]]
+  }
+
+
+
+  class EncounterIdentifier <<value>> {
+    identifier
+  }
+
+  PatientIdentifier -d[hidden]- EncounterIdentifier
+}
+
+
+package directories as "Care Directories" {
+
+class OrganisationIdentifier <<value>> {
+  identifier: [[https://www.datadictionary.nhs.uk/attributes/organisation_code.html ORGANISATION CODE]]
+}
+
+class PractitionerIdentifier <<value>>  {
+id: SDS User Id [NHS E internal use only until API available?]
+identifier: GMP, GMC, HCPC, NMC, etc [[https://www.datadictionary.nhs.uk/data_elements/consultant_code.html CONSULTANT CODE]]
+}
+
+  OrganisationIdentifier -d[hidden]- PractitionerIdentifier
+
+}
+
+
+  diagnosticReport o--> attachment
+
+  attachment o--> Document : data
+
+
+  diagnosticReport -d-> PatientIdentifier : subject
+  diagnosticReport o--> EncounterIdentifier: encounter
+  diagnosticReport o-d-> OrganisationIdentifier : performer [organisation]
+  diagnosticReport o--> PractitionerIdentifier: performer [reporter and technician]
+  diagnosticReport o--> ServiceRequestIdentifier: basedOn
+
+
+@enduml

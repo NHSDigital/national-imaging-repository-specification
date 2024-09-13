@@ -6,7 +6,7 @@ This is based on both FHIR [DocumentReference](https://hl7.org/fhir/R4/documentr
 
 <figure>
 {%include entity-document-entry.svg%}
-<p id="fX.X.X.X-X" class="figureTitle">Entity Document Entry with NHS England modelling</p>
+<p id="fX.X.X.X-X" class="figureTitle">Entity Document Entry</p>
 </figure>
 <br clear="all">
 
