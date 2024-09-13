@@ -4,5 +4,5 @@ Title: "Modality"
 Description: """
 [Modality](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html)
 """
-* include codes from system http://snomed.info/sct where concept child-of #363680008
+* include codes from system http://snomed.info/sct where concept = #childOf 363680008
 
