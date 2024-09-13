@@ -2,13 +2,13 @@
 
 skinparam svgDimensionStyle false
 
-title "Document Index Category and Type (Extract)"
+title "Document Entry Category and Type (Extract)"
 
 
 
 note "Both IHE and HL7 FHIR allow multiple category and class codes\n\nThese codes are used by users for searching for a documents.\n\nThe use of type appears to be like a name" as N1
 
-json "[[ValueSet-document-index-class.html DocumentCategory]]" as Category {
+json "[[ValueSet-document-entry-class.html DocumentCategory]]" as Category {
   "734163000":"Care plan"
 }
 
@@ -25,7 +25,7 @@ note "This may be useful as a sub-category to aid searching" as N2
 N2 .u. Type
 
 
-json "[[ValueSet-nrl.document-index-type.html NRL Document Type (Care Plan only)]]" as Composition {
+json "[[ValueSet-nrl.document-entry-type.html NRL Document Type (Care Plan only)]]" as Composition {
  "736253002":"Mental health crisis plan",
  "887701000000100":"Emergency health care plan",
  "861421000000109":"End of life care coordination summary",
@@ -36,7 +36,7 @@ json "[[ValueSet-nrl.document-index-type.html NRL Document Type (Care Plan only)
  "736366004":"Advance care plan"
 }
 
-json "[[ValueSet-scotland.document-index-type.html Scotland/PRSB Document Type (Care Plan only)]]" as Scotland {
+json "[[ValueSet-scotland.document-entry-type.html Scotland/PRSB Document Type (Care Plan only)]]" as Scotland {
  "823581000000101":"Multidisciplinary Care Plan",
  "736372004":"Discharge Care Plan",
  "736373009":"End of Life Care Plan",

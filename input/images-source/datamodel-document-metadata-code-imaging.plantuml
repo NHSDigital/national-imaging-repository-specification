@@ -2,9 +2,9 @@
 
 
 
-title "Document Index Category and Type (Extract)"
+title "Document Entry Category and Type (Extract)"
 
-json "[[ValueSet-document-index-class.html DocumentCategory]]" as Category {
+json "[[ValueSet-document-entry-class.html DocumentCategory]]" as Category {
 "4201000179104":"Imaging report",
 "363679005":"Imaging"
 }

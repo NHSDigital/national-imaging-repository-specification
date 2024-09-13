@@ -3,7 +3,7 @@
   "id": "docuement-reference-nrl",
   "meta": {
     "profile": [
-      "https://fhir.nhs.uk/NIR/StructureDefinition/DocumentIndex"
+      "https://fhir.nhs.uk/NIR/StructureDefinition/DocumentEntry"
     ]
   },
   "status" : "current",

@@ -1,12 +1,12 @@
-Profile:        DocumentIndex
+Profile:        DocumentEntry
 Parent:         https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference
-Id:             DocumentIndex
-Title:          "NHS England Document Index"
+Id:             DocumentEntry
+Title:          "NHS England Document Entry"
 Description:    " "
 
 * identifier 1..* MS
-* type from DocumentIndexType
-* category from DocumentIndexClass
+* type from DocumentEntryType
+* category from DocumentEntryClass
 * context.facilityType from FacilityType
 * context.practiceSetting from Specialty
 

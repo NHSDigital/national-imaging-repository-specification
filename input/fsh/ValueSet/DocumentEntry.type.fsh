@@ -1,6 +1,6 @@
-ValueSet: DocumentIndexType
-Id: document-index-type
-Title: "Document Index Type"
+ValueSet: DocumentEntryType
+Id: document-entry-type
+Title: "Document Entry Type"
 Description: """
 - [Switzerland DocumentEntry.typeCode](https://fhir.ch/ig/ch-term/3.0.0/ValueSet-DocumentEntry.typeCode.html)
 - [Digital Health and Care Scotland - (EH4001) CLINICAL DOCUMENT INDEXING STANDARDS ](https://www.digihealthcare.scot/app/uploads/2024/05/CDI-Standard-V4.5-FINAL.pdf)

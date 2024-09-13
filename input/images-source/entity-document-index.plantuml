@@ -4,7 +4,7 @@ skinparam svgDimensionStyle false
 
 package healthdocuments as "Health Documents" {
 
-  entity "[[StructureDefinition-DocumentIndex.html Document Index]]" as document  <<aggregate root>>  {
+  entity "[[StructureDefinition-DocumentEntry.html Document Entry]]" as document  <<aggregate root>>  {
     identifier
     subject : [[StructureDefinition-Patient.html PatientIdentity]]
     custodian: [[StructureDefinition-Organisation.html OrganisationIdentity]]
@@ -27,10 +27,10 @@ package healthdocuments as "Health Documents" {
   abstract "[[StructureDefinition-Document.html Document]]" as Document {
   }
 
-   class "[[ValueSet-document-index-class.html DocumentClass]]" as DocumentClass <<value>> {
+   class "[[ValueSet-document-entry-class.html DocumentClass]]" as DocumentClass <<value>> {
     }
 
-  class "[[ValueSet-document-index-type.html DocumentType]]" as DocumentType <<value>> {
+  class "[[ValueSet-document-entry-type.html DocumentType]]" as DocumentType <<value>> {
 
   }
 
