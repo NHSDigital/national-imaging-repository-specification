@@ -3,11 +3,19 @@
 
 TODO
 
-## High Level Specification
-
-[Contsys (ISO 13940) - healthcare professional](https://contsys.org/concept/healthcare_professional)
-[Contsys (ISO 13940) - healthcare personnel](https://contsys.org/concept/healthcare_personnel)
-
 ## Entity Mapping
 
-TODO
+Based on [Royal College of Radiologists - Understanding the Technical Options](https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf) mapped to FHIR following [HL7 Version 2 to FHIR - ORU_R01 Unsolicited Report Alarm](https://build.fhir.org/ig/HL7/v2-to-fhir/ConceptMap-message-oru-r01-to-bundle.html). 
+
+
+| FHIR DiagnosticReport      | HL7 v2 Segment and Name             | DICOM                         | Note                                            | Binding |
+|----------------------------|-------------------------------------|-------------------------------|-------------------------------------------------|---------|
+| identifier.value           | OBR-3 Filler Order Number           |                               |                                                 |         |
+| subject.identifier.value   | PID-3-1   Patient Identifiers       |                               | Where PID-3-4 (Assigning Authority) = NHS       |         |
+| subject.identifier.system  | PID-4-4 Assigning Authority         |                               | Fixed value `https://fhir.nhs.uk/Id/nhs-number` |         |        
+| subject.display            | PID-5      Patient Name             |                               |                                                 |         |
+| basedOn.identifier.value   | ORC-3      Filler Order Number      | 0008,0050 AccessionNumber     |                                                 |         |
+| basedOn.identifier.system  | ORC-3-4 Assigning Authority         | 0008,0051 Assigning Authority | Convert to a FHIR System Uri                    |         |
+| basedOn.type               |                                     |                               | Fixed value `ServiceRequest`                    |         |
+| encounter.identifier.value | PV1-19     Visit Number             |                               |                                                 |         |
+ | code                       | OBR-4 	Universal Service Identifier | 0008,1032                     | [IMAGING CODE (NICIP)](https://www.datadictionary.nhs.uk/data_elements/imaging_code__nicip_.html)                                            |         | 
