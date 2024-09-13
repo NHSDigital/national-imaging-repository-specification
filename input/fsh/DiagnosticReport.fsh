@@ -33,8 +33,28 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * subject.identifier.system 1..1
 * subject.identifier.value 1..1
 
+* performer.identifier 1..1
+* performer.identifier.system 1..1
+* performer.identifier.value 1..1
+* performer.type 1..1
 * performer.extension contains
       http://hl7.org/fhir/StructureDefinition/event-performerFunction named performerFunction 0..1
+* performer ^slicing.discriminator.type = #pattern
+* performer ^slicing.discriminator.path = "type"
+* performer ^slicing.rules = #open
+* performer ^slicing.description = "Slice based on the type"
+* performer ^slicing.ordered = false
+* basedOn contains
+  organisation 1..1 and operator 0..*
 
+* performer[organisation].identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
+* performer[organisation].type = "Organization"
+* performer[operator].type = "Practitioner"
+
+* resultsInterpreter.identifier 1..1
+* resultsInterpreter.identifier.system 1..1
+* resultsInterpreter.identifier.value 1..1
+* resultsInterpreter.type 1..1
 * resultsInterpreter.extension contains
       http://hl7.org/fhir/StructureDefinition/event-performerFunction named performerFunction 0..1
+
