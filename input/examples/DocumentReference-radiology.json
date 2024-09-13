@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "docuement-reference-radiology",
+  "id": "document-reference-radiology",
   "meta": {
     "profile": [
       "https://fhir.nhs.uk/NIR/StructureDefinition/DocumentEntry"
