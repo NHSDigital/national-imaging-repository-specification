@@ -30,7 +30,7 @@
         {
           "system": "http://snomed.info/sct",
           "code": "16310003",
-          "display": "Diagnostic ultrasonography (procedure)"
+          "display": "Ultrasound"
         }
       ]
     }
@@ -53,7 +53,7 @@
     {
       "type": "Organization",
       "identifier": {
-        "system": "https://fhir.nhs.uk/Id/ods-organisation-code",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
         "value": "ZZ123456"
       },
       "display": "King Charles University Hospital, Testham"

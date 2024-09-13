@@ -26,7 +26,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 
 * basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
 * basedOn[accessionNumber].type 1..1 MS
-* basedOn[accessionNumber].type = "ServiceRequest"
+* basedOn[accessionNumber].type = "HL7V2#ACSN"
 * basedOn[accessionNumber].identifier 1..1
 * basedOn[accessionNumber].identifier.system 1..1
 * basedOn[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
