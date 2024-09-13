@@ -6,7 +6,7 @@ package patientAdminisrtration as "Patient Administration" {
   component "[[https://digital.nhs.uk/services/personal-demographics-service PatientDemographicsService]]" as PatientDemographicsService
   interface "[[https://profiles.ihe.net/ITI/PDQm/ITI-78.html IHE PDQm\nITI ITI-78]] " as PDQm
 
-  PDQm -r-> PatientDemographicsService
+  PDQm -r-> PatientDemographicsService : Patient
 }
 
 
