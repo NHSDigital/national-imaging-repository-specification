@@ -12,7 +12,7 @@ This is based on both FHIR [DocumentReference](https://hl7.org/fhir/R4/documentr
 
 ## Entity Mapping and Description
 
-For HL7 v2 MDM see [HL7 v2 Mapping](https://hl7.org/fhir/R4/documentreference-mappings.html#v2) 
+For HL7 v2 MDM T02, see [HL7 v2 MDM T02 Mapping](https://build.fhir.org/ig/HL7/v2-to-fhir/ConceptMap-message-mdm-t02-to-bundle.html) 
 
 Note: links to HL7 FHIR Practitioner has removed several IHE XDS Document Entry fields, and just retained identifier and name. It is expected these values would be available via the NHS England Healthcare Worker API which may conform to [IHE Mobile Care Services Discovery (mCSD)](https://profiles.ihe.net/ITI/mCSD/index.html) interface contracts.
 
