@@ -58,12 +58,13 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * resultsInterpreter.type 1..1
 * resultsInterpreter.extension contains
       http://hl7.org/fhir/StructureDefinition/event-performerFunction named performerFunction 0..1
+
 * resultsInterpreter ^slicing.discriminator.type = #pattern
 * resultsInterpreter ^slicing.discriminator.path = "extension[performerFunction].valueCodeableConcept.coding.code"
 * resultsInterpreter ^slicing.rules = #open
 * resultsInterpreter ^slicing.description = "Slice based on the type"
 * resultsInterpreter ^slicing.ordered = false
-* performer contains
+* resultsInterpreter contains
   primaryReporter 0..* and
   secondaryReporter 0..*
 
