@@ -1,18 +1,23 @@
 {
   "resourceType": "DocumentReference",
-  "id": "docuement-reference-nrl",
+  "id": "docuement-reference-radiology",
   "meta": {
     "profile": [
       "https://fhir.nhs.uk/NIR/StructureDefinition/DocumentEntry"
     ]
   },
-  "status" : "current",
+  "status": "current",
   "type": {
     "coding": [
       {
         "system": "https://nicip.nhs.uk",
         "code": "MAULR",
         "display": "MRA Upper limb Rt"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "418062002",
+        "display": "Magnetic resonance imaging angiography of upper limb artery (procedure)"
       }
     ]
   },
@@ -23,6 +28,15 @@
           "system": "http://snomed.info/sct",
           "code": "721981007",
           "display": "Diagnostic studies report"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "113091000",
+          "display": "Magnetic resonance imaging (procedure)"
         }
       ]
     }
@@ -38,29 +52,31 @@
       "system": "https://fhir.nhs.uk/Id/ods-organization-code",
       "value": "Y05868"
     },
-    "display" : "LEEDS TEACHING HOSPITALS NHS TRUST"
+    "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
   },
-  "content":[
+  "content": [
     {
       "attachment": {
         "contentType": "application/fhir+json",
         "url": "https://an-ris-system.org.nhs.uk/some-path/FHIR/R4/DiagnosticReport?_id=c9d0e5e3-ac48-4285-8f9c-af9b30d235f1",
-        "title" : "Diagnostic Studies Report",
-        "creation" : "2023-10-22T09:31:45+00:00"
+        "title": "Diagnostic Studies Report",
+        "creation": "2023-10-22T09:31:45+00:00"
       },
       "format": {
         "code": "apiplatform",
         "display": "API Platform"
       }
-    }]
-  ,
-  "context" : {
-    "related" : [{
-      "type" : "HL7V2#ACSN",
-      "identifier" : {
+    }
+  ],
+  "context": {
+    "related": [
+      {
+        "type": "HL7V2#ACSN",
+        "identifier": {
           "system": "https://acme.org.nhs.uk/Id/AccessionNumber",
-        "value" : "123456789"
+          "value": "123456789"
+        }
       }
-    }]
+    ]
   }
 }
