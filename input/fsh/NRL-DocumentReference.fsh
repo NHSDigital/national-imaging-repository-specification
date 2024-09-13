@@ -1,6 +1,6 @@
-Profile:        NRL_DocumentReference
+Profile:        NRLDocumentReference
 Parent:         http://hl7.org/fhir/StructureDefinition/DocumentReference
-Id:             NRL_DocumentReference
+Id:             NRL-DocumentReference
 Title:          "NRL DocumentReference"
 Description:    """
 Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Supersede existing, document pointers](https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir/v3/producer#post-/DocumentReference)
