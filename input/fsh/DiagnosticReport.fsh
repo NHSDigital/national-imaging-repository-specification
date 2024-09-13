@@ -1,8 +1,16 @@
 Profile:        DiagnosticReport
 Parent:         http://hl7.org/fhir/StructureDefinition/DiagnosticReport
 Id:             DiagnosticReport
-Title:          "NHS England Diagnostic Report"
-Description:    "NHS England DiagnosticReport based on [Royal College of Radiologists - Understanding the Technical Options](https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf)"
+Title:          "Diagnostic Report"
+Description:    """
+DiagnosticReport based on
+
+- [Royal College of Radiologists - Understanding the Technical Options](https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf)
+- [IHE Interactive Multimedia Report (IMR)](https://profiles.ihe.net/RAD/IMR)
+
+At present this is not based on [UK Core DiagnosticReport](https://simplifier.net/hl7fhirukcorer4/ukcore-diagnosticreport) as this is analysis of several enterprise entity models but will be at a later date.
+
+"""
 
 * identifier 1..* MS
 
