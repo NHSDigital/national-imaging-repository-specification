@@ -1,8 +1,8 @@
 Profile:        DiagnosticReport
 Parent:         http://hl7.org/fhir/StructureDefinition/DiagnosticReport
 Id:             DiagnosticReport
-Title:          "NHS England DiagnosticReport"
-Description:    "NHS England DiagnosticReport Entity Model, based on data model [HL7 IPS DiagnosticReport](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)"
+Title:          "NHS England Diagnostic Report"
+Description:    "NHS England DiagnosticReport based on [Royal College of Radiologists - Understanding the Technical Options](https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf)"
 
 * identifier 1..* MS
 

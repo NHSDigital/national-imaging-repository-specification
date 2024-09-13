@@ -2,7 +2,9 @@ Profile:        DocumentEntry
 Parent:         https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference
 Id:             DocumentEntry
 Title:          "NHS England Document Entry"
-Description:    " "
+Description:    """
+Based on [IHE Europe Metadata for exchange medical documents and images](https://www.ihe-europe.net/sites/default/files/2017-11/IHE_ITI_XDS_Metadata_Guidelines_v1.0.pdf)
+ """
 
 * identifier 1..* MS
 * type from DocumentEntryType
