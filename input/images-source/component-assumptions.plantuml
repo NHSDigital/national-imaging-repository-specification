@@ -39,7 +39,7 @@ package Terminology {
  component "[[https://digital.nhs.uk/services/terminology-server TerminologyService]]" as TerminologyService
   interface "[[https://profiles.ihe.net/ITI/SVCM/volume-1.html IHE SVCM]]" as SVCM
 
-  SVCM -r-> TerminologyService: CodeSyste, ValueSet,\nConceptMap, etc
+  SVCM -r-> TerminologyService: CodeSystem, ValueSet,\nConceptMap, etc
 }
 
 PatientDemographicsService -d[hidden]- OrganisationService
