@@ -34,7 +34,7 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
 * type.coding.system = "http://snomed.info/sct"
 * type.coding.code  1..1
 
-* content.format 1..*
+* content.format 1..1
 
 * context.related ^slicing.discriminator.type = #pattern
 * context.related ^slicing.discriminator.path = "identifier.system"
