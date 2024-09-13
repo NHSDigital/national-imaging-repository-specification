@@ -1,9 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "draft",
-  "name": "DischargeDestination",
-  "id": "discharge-destination",
-  "title": "Discharge Destination",
-  "description": "- [DESTINATION OF DISCHARGE](https://www.datadictionary.nhs.uk/data_elements/destination_of_discharge__hospital_provider_spell_.html)\n- [UKCoreDischargeDestination](https://simplifier.net/hl7fhirukcorer4/valueset-ukcore-dischargedestination)",
-  "url": "https://fhir.nhs.uk/NIR/ValueSet/discharge-destination"
-}

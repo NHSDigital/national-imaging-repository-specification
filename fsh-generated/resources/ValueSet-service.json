@@ -1,9 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "draft",
-  "name": "Service",
-  "id": "service",
-  "title": "Service",
-  "description": "- [TREATMENT FUNCTION CODE](https://www.datadictionary.nhs.uk/attributes/treatment_function_code.html)\n- [UKCoreCareSettingType](https://simplifier.net/hl7fhirukcorer4/valueset-ukcore-caresettingtype)",
-  "url": "https://fhir.nhs.uk/NIR/ValueSet/service"
-}

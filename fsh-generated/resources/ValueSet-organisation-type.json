@@ -1,9 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "draft",
-  "name": "OrganisationType",
-  "id": "organisation-type",
-  "title": "Organisation Type",
-  "description": "-  [eRS Organisation Type](https://fhir.nhs.uk/STU3/ValueSet/eRS-OrganisationType-1)\n-  [ODS API Organization Role](https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1)\n\nNote ODS has mapped this to an extension",
-  "url": "https://fhir.nhs.uk/NIR/ValueSet/organisation-type"
-}

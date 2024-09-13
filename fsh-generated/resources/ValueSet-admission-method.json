@@ -1,9 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "draft",
-  "name": "AdmissionMethod",
-  "id": "admission-method",
-  "title": "Admission Method",
-  "description": "- [ADMISSION METHOD](https://www.datadictionary.nhs.uk/attributes/admission_method.html)",
-  "url": "https://fhir.nhs.uk/NIR/ValueSet/admission-method"
-}

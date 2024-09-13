@@ -1,9 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "draft",
-  "name": "PractitionerRoleCode",
-  "id": "practitioner-role-code",
-  "title": "Practitioner Role Code",
-  "description": "- [JOB ROLE CODE](https://www.datadictionary.nhs.uk/attributes/job_role_code.html)\n- [UKCoreSDSJobRoleName](https://simplifier.net/hl7fhirukcorer4/codesystem-ukcore-sdsjobrolename)",
-  "url": "https://fhir.nhs.uk/NIR/ValueSet/practitioner-role-code"
-}

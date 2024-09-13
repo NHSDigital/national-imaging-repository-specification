@@ -1,9 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "draft",
-  "name": "ServiceProvisionCode",
-  "id": "service-provision-code",
-  "title": "ServiceProvision Code",
-  "description": "E.g. [NICIP?](https://digital.nhs.uk/services/terminology-and-classifications/national-interim-clinical-imaging-procedure-nicip-code-set)\n\nNot specified in eRS and BARS\n",
-  "url": "https://fhir.nhs.uk/NIR/ValueSet/service-provision-code"
-}
