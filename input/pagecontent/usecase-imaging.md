@@ -87,7 +87,7 @@ Alternatively, these services can be created locally. IHE recommendations for th
 </figure>
 <br clear="all">
 
-## Terminology
+### Terminology
 
 Where possible/practical UK SNOMED CT will be used (TODO ISN). The following principles will be followed:
 
