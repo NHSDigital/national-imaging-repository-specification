@@ -32,14 +32,22 @@ NHS Radiology faces significant challenges in enabling inter-organisational acce
 ### NRL Interface Alpha
 
 <figure>
-{%include component-health-document-nrl-actual.svg%}
-<p id="fX.X.X.X-X" class="figureTitle">NRL Interface Alpha</p>
+{%include component-health-document-nrl-nir.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">NRL Interface for NIR Alpha</p>
 </figure>
 <br clear="all">
 
 This health document query interface diagram is describing steps 1 and 2 from Diagram 1. The client application searches the document registry via the health document query interface to retrieve a list of image studies / reports.
 
+### IHE XDS/MHD(XDSonFHIR)
 
+TODO Is a specific version of XDS specified i.e. XDS.b or MHD (XDSonFHIR)?
+
+<figure>
+{%include component-health-document-ihe-nir.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">IHE XDS/MHD Interfaces for NIR Alpha</p>
+</figure>
+<br clear="all">
 
 The health document post interface defines how entries in the document registry are populated and maintained. The use case for this is not present.
 

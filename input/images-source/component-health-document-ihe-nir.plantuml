@@ -1,0 +1,42 @@
+@startuml
+
+
+
+component ClientApplication
+
+interface MHD as "Health Document\nQuery Interface\n(version XDSonFHIR)"
+
+
+note "Entity Model [[StructureDefinition-DocumentIndex.html Document Entry ]]\nInterface Contract [[CapabilityStatement-NHSE-CIC-8-MHD.html NHS England IHE MHD ITI-67]] " as N3
+
+
+interface XDS as "Health Document\nQuery Interface\n(version XDS.b)"
+
+note "Entity Model [[StructureDefinition-DocumentEntry.html Document Entry]]\nbackported to IHE Document Metadata\nInterface Contract [[https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html IHE Cross-Enterprise Document Sharing (XDS.b)]]" as N1
+
+
+
+
+XDS .l. N1
+
+N3 .l. MHD
+
+
+
+package EHRSystem as "XDS System" {
+
+component DocumentRegistry
+
+}
+
+
+ClientApplication -d-> MHD
+ClientApplication -d-> XDS
+
+
+
+MHD -d-> DocumentRegistry
+XDS -d-> DocumentRegistry
+
+
+@enduml
