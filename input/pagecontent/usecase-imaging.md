@@ -1,0 +1,22 @@
+
+## Problem Statement
+
+NHS Radiology faces significant challenges in enabling inter-organisational access to patients' historical diagnostic images and reports, which is crucial for ensuring continuity of care. The current reliance on the Image Exchange Portal (IEP) to share imaging studies across Trusts or Imaging Networks is fraught with inefficiencies, leading to delays and frustration for clinicians. These limitations result in unnecessary patient re-imaging and resource wastage, costing approximately £4 million annually. A solution is needed to provide seamless access to historical radiological imaging studies across all hospital sites, regardless of where the study was originally conducted.
+
+## Definitions
+
+| Term | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DICOM | 	Digital Imaging and Communications in Medicine is the global standard for medical images developed by American College of Radiology (ACR) and National Electrical Manufacturers Association (NEMA).                                                                                                                                                                                                                                                                                             |
+| Imaging Report | An imaging report reflects the observations and interpretations of one or more imaging studies. It usually contains elements such as the reason why the study is requested, relevant contextual medical information, the used modality and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice.                                                                                          |
+|Imaging Study | 	An imaging study comprises a set of objects, including images and other objects, that were made for a specific purpose and usually in response to a request from a healthcare provider. The Imaging Study does not include the Imaging Report as defined in this guideline. Imaging Study in this context does not refer to the FHIR Resource ImagingStudy - FHIR v4.0.1 (hl7.org)                                                                                                              |
+| PACS | Picture Archiving and Communication System. \n\n A PACS consists of three major components: a secure network for the transmission of imaging and patient information, workstations for interpreting and reviewing images, and archives for the storage and retrieval of images and reports. Combined with web technology, a PACS has the ability to deliver timely and efficient access to images, interpretations, and related data. A PACS is usually linked to a Hospital Information System. |
+| RIS  | Radiology Information System. \n\n The main functions of a RIS are the patient scheduling, resource management, examination performance tracking, reporting, results distribution, and procedure billing. Typically, it is integrated in the HIS and the PACS.                                                                                                                                                                                                                                   |
+
+## Searching and Retrieving an Image
+
+<img style="max-width: 50%" alt="Imaging Workflow" src="finding-imaging-workflow.png"/>
+<br clear="all"/>
+
+<img style="max-width: 50%" alt="Imaging Workflow Activity" src="imaging-workflow-bpmn.png"/>
+<br clear="all"/>
