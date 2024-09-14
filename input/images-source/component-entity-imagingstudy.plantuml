@@ -7,8 +7,8 @@ title Radiology Integration
 
 component ClientApplication
 
-  component PACSRepository
-   component DocumentRepository
+  component "Image Repository" as PACSRepository
+   component "Document Repository" as DocumentRepository
 
 
 interface "Imaging Study \nor Report Interface" as ImagingStudyInterface
