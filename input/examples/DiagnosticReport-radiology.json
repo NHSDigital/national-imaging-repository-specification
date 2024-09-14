@@ -10,7 +10,7 @@
   "status": "final",
   "basedOn": [
     {
-      "type": "HL7V2#ACSN",
+      "type": "ServiceRequest",
       "identifier": {
         "system": "https://acme.org.nhs.uk/Id/AccessionNumber",
         "value": "123456789"

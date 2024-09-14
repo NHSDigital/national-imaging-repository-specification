@@ -29,7 +29,7 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.related contains
   accessionNumber 1..1 MS
 * context.related[accessionNumber].type 1..1 MS
-* context.related[accessionNumber].type = "HL7V2#ACSN"
+* context.related[accessionNumber].type = "ServiceRequest"
 * context.related[accessionNumber].identifier 1..1
 * context.related[accessionNumber].identifier.system 1..1
 * context.related[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
