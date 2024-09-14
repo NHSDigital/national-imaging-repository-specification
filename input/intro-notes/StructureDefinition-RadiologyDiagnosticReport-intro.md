@@ -50,21 +50,4 @@ Note: performer and resultsIntepreter links to HL7 FHIR Practitioner has removed
 |                                                                                                | conclusion                                                                                      |                                                        | Is this present?                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                |  
 | Radiology Report Narrrative comment<br/>Radiographer comments<br/>Narrative clinical history   | presentForm (Entire Report)                                                                     |OBX-5 | [DICOM SR](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup23.pdf) | If text based, the multiple types here may be better suited to a [FHIR Document](https://hl7.org/fhir/R4/documents.html), see [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/). Note DICOM SR and FHIR Documents are similar concepts. <br/><br/> See also [IHE Interactive Multimedia Report (IMR)](https://profiles.ihe.net/RAD/IMR/volume-1.html#1522-imr-actor-options) for options. | 
 
-## Assumptions
-
-The HL7 FHIR mapping uses identifiers for Patient, Practitioner and Organisation, if details of these entities are required, the following services can be used:
-
-- [Personal Demographics Service (PDS)](https://digital.nhs.uk/services/personal-demographics-service)
-- [Organisation Data Service (ODS)](https://digital.nhs.uk/services/organisation-data-service)
-- **Healthcare Worker API** (in development)
-
-To aid with the use of UK SNOMED CT and other terminology, the [Terminology Server](https://digital.nhs.uk/services/terminology-server) is recommended
-
-Alternatively, these services can be created locally. IHE recommendations for these interfaces are shown on the diagram below. 
-
-<figure>
-{%include component-assumptions.svg%}
-<p id="fX.X.X.X-X" class="figureTitle">Suggested Terminology and Directory Services</p>
-</figure>
-<br clear="all">
 

@@ -54,3 +54,30 @@ The health document post interface defines how entries in the document registry 
 The client application will call the imaging study or report interface which will return either DICOM KOS or imaging report via an interface defined in IHE MHD Retrieve Document [ITI-68].
 
 If the user has chosen to retrieve a DICOM KOS / Imaging Study they can use this to retrieve DICOM images via IHE Web-based Image Access (WIA).
+
+## Assumptions
+
+### Identifiers
+
+It is assumed entity identifiers specified in the NHS Data Dictionary will be used (TODO ISN?). It will be the responsibility of the sender to ensure these identifiers are correct. Only verified/traced NHS Numbers should be be used, untraced NHS Numbers can be used when verfiying or tracing.
+
+If details of these entities such as Patient, Practitioner or Organisation are required, then the following services can be used:
+
+- [Personal Demographics Service (PDS)](https://digital.nhs.uk/services/personal-demographics-service)
+- [Organisation Data Service (ODS)](https://digital.nhs.uk/services/organisation-data-service)
+- **Healthcare Worker API** (in development)
+
+Alternatively, these services can be created locally. IHE recommendations for these interfaces are shown on the diagram below.
+
+<figure>
+{%include component-assumptions.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Suggested Terminology and Directory Services</p>
+</figure>
+<br clear="all">
+
+## Terminology
+
+Where possible/practical UK SNOMED CT will be used (TODO ISN)
+
+To aid with the use of UK SNOMED CT and other terminology, the [Terminology Server](https://digital.nhs.uk/services/terminology-server) is recommended
+
