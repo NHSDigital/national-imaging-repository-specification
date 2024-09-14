@@ -1,0 +1,35 @@
+@startuml
+
+hide footbox
+
+actor "Clinician \n\n**Client Application**"  as C
+participant "Electronic Document Management System (EDMS)\n\n**Document Registry**" as HS
+participant "Electronic Document Management System (EDMS)\n\n**Document Repository**" as DR
+participant "Picture archiving and communication system (PACS)\n\n**Image Repository**" as P
+
+== Search and Retrieve Imaging Studies and Reports ==
+C -> C : Initiate search for patient imaging studies (including patient identifier and query parameters)
+
+C -> HS  : Query for imaging studies and reports
+HS --> C: Return list of matching imaging studies and reports
+
+C -> C: Display list of imaging studies and reports
+C -> C: Select specific imaging studies and reports
+
+C -> DR: Retrieve selected imaging studies and reports
+DR --> C: Return selected study/report
+
+C -> C: Display the requested imaging studies and reports
+
+== Image Study only ==
+loop for each selected image
+    C -> P: Retrieve selected image
+    P --> C: Return selected Image
+end
+
+
+== Clinician Reviews and Uses the Information ==
+C -> C: Review retrieved imaging studies and reports
+C -> C: Inform diagnosis and treatment planning
+
+@enduml

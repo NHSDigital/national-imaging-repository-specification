@@ -13,10 +13,44 @@ NHS Radiology faces significant challenges in enabling inter-organisational acce
 | PACS | Picture Archiving and Communication System. \n\n A PACS consists of three major components: a secure network for the transmission of imaging and patient information, workstations for interpreting and reviewing images, and archives for the storage and retrieval of images and reports. Combined with web technology, a PACS has the ability to deliver timely and efficient access to images, interpretations, and related data. A PACS is usually linked to a Hospital Information System. |
 | RIS  | Radiology Information System. \n\n The main functions of a RIS are the patient scheduling, resource management, examination performance tracking, reporting, results distribution, and procedure billing. Typically, it is integrated in the HIS and the PACS.                                                                                                                                                                                                                                   |
 
-## Searching and Retrieving an Image
+## Searching and Retrieving an Image Study or Report
 
 <img style="max-width: 50%" alt="Imaging Workflow" src="finding-imaging-workflow.png"/>
 <br clear="all"/>
 
 <img style="max-width: 50%" alt="Imaging Workflow Activity" src="imaging-workflow-bpmn.png"/>
 <br clear="all"/>
+
+<figure>
+{%include sequence-finding-image.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Sequence Diagram</p>
+</figure>
+<br clear="all">
+
+## Interfaces
+
+### NRL Interface Alpha
+
+<figure>
+{%include component-health-document-nrl-actual.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">NRL Interface Alpha</p>
+</figure>
+<br clear="all">
+
+This health document query interface diagram is describing steps 1 and 2 from Diagram 1. The client application searches the document registry via the health document query interface to retrieve a list of image studies / reports.
+
+
+
+The health document post interface defines how entries in the document registry are populated and maintained. The use case for this is not present.
+
+### Radiology Integration 
+
+<figure>
+{%include component-entity-imagingstudy.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Radiology Integration</p>
+</figure>
+<br clear="all">
+
+The client application will call the imaging study or report interface which will return either DICOM KOS or imaging report via an interface defined in IHE MHD Retrieve Document [ITI-68].
+
+If the user has chosen to retrieve a DICOM KOS / Imaging Study they can use this to retrieve DICOM images via IHE Web-based Image Access (WIA).

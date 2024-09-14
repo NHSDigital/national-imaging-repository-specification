@@ -1,0 +1,41 @@
+@startuml
+
+title NRL Interface Alpha
+
+component ClientApplication
+
+interface iti65 as "Health Document\nPOST interface"
+note right
+Data Model [[https://simplifier.net/hl7fhirukcorer4/ukcore-documentreference HL7 UKCore DocumentReference]]
+API [[https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir/v3/producer#post-/DocumentReference NRL Create new, or Supersede existing, document pointers]]
+with new addition of [[https://hl7.org/fhir/R4/http.html#transaction FHIR Transaction]]
+end note
+
+
+interface MHD as "Health Document\nQuery Interface"
+note right
+Data Model [[https://simplifier.net/hl7fhirukcorer4/ukcore-documentreference HL7 UKCore DocumentReference]]
+API [[https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir/v3/producer#get-/DocumentReference NRL Retrieve document pointers (GET)]]
+end note
+
+
+
+
+package EHRSystem as "NRL" {
+
+component "Document Registry" as DocumentRegistry
+
+
+}
+
+
+iti65 -r-> DocumentRegistry
+
+ClientApplication -d-> MHD
+ClientApplication -d-> iti65
+
+
+MHD -d-> DocumentRegistry
+
+
+@enduml
