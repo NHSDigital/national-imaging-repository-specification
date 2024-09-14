@@ -13,13 +13,13 @@ component ClientApplication
 
 interface "Imaging Study \nor Report Interface" as ImagingStudyInterface
 note right
-Entity Model [[StructureDefinition-ImagingStudy.html DICOM KOS]] or Imaging Report
+Entity Model [[https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf DICOM KOS]] or Imaging Report
 Interface Contract [[https://profiles.ihe.net/ITI/MHD/ITI-68.html IHE Mobile access to Health Documents (MHD) \nRetrieve Document ITI-68]]
 end note
 
 interface "Image Interface" as ImageInterface
 note right
-Entity Model [[StructureDefinition-Image.html DICOM]]
+Entity Model [[https://www.dicomstandard.org DICOM]]
 Interface Contract [[https://wiki.ihe.net/index.php/Web-based_Image_Access IHE Web-based Image Access]]
 end note
 
