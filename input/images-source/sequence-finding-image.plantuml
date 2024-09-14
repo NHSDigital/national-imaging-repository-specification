@@ -1,6 +1,7 @@
 @startuml
 
 hide footbox
+skinparam svgDimensionStyle false
 
 actor "Clinician \n\n**Client Application**"  as C
 participant "Electronic Document Management System (EDMS)\n\n**Document Registry**" as HS
