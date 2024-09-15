@@ -81,6 +81,8 @@ If details of these entities such as Patient, Practitioner or Organisation are r
 
 Alternatively, these services can be created locally. IHE recommendations for these interfaces are shown on the diagram below.
 
+> **NHS Number - misidentification**. This is when a patient or person has been incorrectly linked to a NHS Number, normally by mistaken identity. This may require the use of a [Patient Master Identity Registry (PMIR)](https://profiles.ihe.net/ITI/PMIR/) but this topic is not covered here. 
+
 <figure>
 {%include component-assumptions.svg%}
 <p id="fX.X.X.X-X" class="figureTitle">Suggested Terminology and Directory Services</p>
