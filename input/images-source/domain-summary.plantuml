@@ -1,0 +1,80 @@
+@startuml
+
+
+
+component DocumentRegistry
+
+package HealthRecords {
+component DocumentRepository
+component FormRepository
+component ObservationRepository
+
+interface "Event Feed" as ev2
+interface "Event Feed" as ev3
+interface "Event Feed" as ev4
+
+interface "Query API" as q1
+interface "Query API" as q2
+interface "Query API" as q3
+
+
+ev2 -r-> DocumentRepository
+ev3 -r-> FormRepository
+ev4 -r-> ObservationRepository
+
+q1 -d-> DocumentRepository
+q2 -d-> FormRepository
+q3 -d-> ObservationRepository
+
+note "Known in informatics as archetypes\nand has two types: \n\n- Aggregate\n- Data Transfer Object (DTO)\n\nDTO are data capture centric \n(e.g. NEWS2 and Vital Signs) and will \nbe accessed via those repositories.\n\nAggregate examples include PROMS and ReSPECT.\nNote the ReSPECT aggregate is complex,\nit also includes Observations" as nform
+
+note "Mostly PDF, images (jpeg, png, etc)  and html. Informtatics\nalso has Compositions which has two types: \n\n- Aggregate\n- Data Transfer Objects (DTO)\n\nDTO examples inc. Patient Summaries, Datasets\nand ToC)\n\nSome archetypes and HL7 messasges are\nprobably aggregate/compositions (not DTO)\n(e.g. Lab Reports, Discharge Letters, Prescription\nand Referral Letters)" as  ncomposition
+
+nform -u- FormRepository
+ncomposition -u- DocumentRepository
+}
+
+DocumentRegistry ..> DocumentRepository
+DocumentRegistry ..> FormRepository
+
+
+package CareDirectories {
+component EndpointRegistry
+interface "CRUD" as crud1
+crud1 -d-> EndpointRegistry
+}
+
+package PatientAdministration {
+ component PatientDemographicsRepository
+
+
+ component PatientCareHistoryRepository
+
+
+ interface "Event Feed" as ev5
+ interface "Event Feed" as ev6
+ interface "Event Feed" as ev7
+
+interface "Query API" as q4
+interface "Query API" as q5
+
+ ev5 -r-> PatientDemographicsRepository
+ PatientDemographicsRepository -r-> ev6
+ ev7 -r-> PatientCareHistoryRepository
+
+ q4 -d-> PatientCareHistoryRepository
+ q5 -d-> PatientDemographicsRepository
+
+}
+interface "Event Feed" as ev1
+
+interface "Query API" as q6
+
+PatientDemographicsRepository -d[hidden]- q3
+
+ev1 -r-> DocumentRegistry
+q6 -d-> DocumentRegistry
+
+
+
+@enduml
