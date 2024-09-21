@@ -1,10 +1,10 @@
 @startuml
 
 
+package HealthRecords {
 
 component DocumentRegistry
 
-package HealthRecords {
 component DocumentRepository
 component FormRepository
 component ObservationRepository
@@ -17,6 +17,10 @@ interface "Query API" as q1
 interface "Query API" as q2
 interface "Query API" as q3
 
+interface "Event Feed" as ev1
+
+interface "Query API" as q6
+
 
 ev2 -r-> DocumentRepository
 ev3 -r-> FormRepository
@@ -25,6 +29,9 @@ ev4 -r-> ObservationRepository
 q1 -d-> DocumentRepository
 q2 -d-> FormRepository
 q3 -d-> ObservationRepository
+
+ev1 -r-> DocumentRegistry
+q6 -d-> DocumentRegistry
 
 note "Known in informatics as archetypes\nand has two types: \n\n- Aggregate\n- Data Transfer Object (DTO)\n\nDTO are data capture centric \n(e.g. NEWS2 and Vital Signs) and will \nbe accessed via those repositories.\n\nAggregate examples include PROMS and ReSPECT.\nNote the ReSPECT aggregate is complex,\nit also includes Observations" as nform
 
@@ -40,8 +47,10 @@ DocumentRegistry ..> FormRepository
 
 package CareDirectories {
 component EndpointRegistry
-interface "CRUD" as crud1
+interface "QueryAPI" as crud1
+interface "Upates" as crud2
 crud1 -d-> EndpointRegistry
+crud2 -r-> EndpointRegistry
 }
 
 package PatientAdministration {
@@ -57,6 +66,7 @@ package PatientAdministration {
 
 interface "Query API" as q4
 interface "Query API" as q5
+interface "Updates" as q7
 
  ev5 -r-> PatientDemographicsRepository
  PatientDemographicsRepository -r-> ev6
@@ -64,17 +74,13 @@ interface "Query API" as q5
 
  q4 -d-> PatientCareHistoryRepository
  q5 -d-> PatientDemographicsRepository
+ q7 -d-> PatientDemographicsRepository
 
 }
-interface "Event Feed" as ev1
 
-interface "Query API" as q6
+PatientDemographicsRepository -d[hidden]- q6
 
-PatientDemographicsRepository -d[hidden]- q3
-
-ev1 -r-> DocumentRegistry
-q6 -d-> DocumentRegistry
-
+PatientCareHistoryRepository .d. q3
 
 
 @enduml
