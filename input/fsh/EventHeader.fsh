@@ -4,6 +4,9 @@ Id:             event-header
 Title:          "Event Header"
 Description:    "Details to follow"
 
+* event[x] only uri
+* event[x] ^short      = "Reference uri to SubscriptionTopic"
+
 * sender.identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
 * sender.identifier 1..1
 * sender.identifier.system 1..1
