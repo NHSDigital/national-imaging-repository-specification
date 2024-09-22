@@ -33,6 +33,7 @@ dependencies:
     uri: https://simplifier.net/guide/ukcoreversionhistory
   ihe.iti.mhd: 4.2.1  
   ihe.rad.imr: 1.1.0
+  hl7.fhir.uv.subscriptions-backport: 1.2.0-ballot
 
 FSHOnly: false
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
