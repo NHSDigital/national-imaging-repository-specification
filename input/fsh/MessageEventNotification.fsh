@@ -1,6 +1,6 @@
 Profile:        MessageEventNotification
 Parent:         http://hl7.org/fhir/StructureDefinition/Bundle
-Id:             message-notification
+Id:             message-event-notification
 Title:          "Message Event Notification"
 Description:    "Details to follow"
 
