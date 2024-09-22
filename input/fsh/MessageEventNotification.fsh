@@ -8,7 +8,7 @@ Description:    "Details to follow"
 * type = http://hl7.org/fhir/bundle-type#message
 * timestamp 1..1
 * entry 1..*
-* entry.resource 1..*
+* entry.resource 1..1
 
 * centry ^slicing.discriminator.type = #pattern
 * entry ^slicing.discriminator.path = "resource.meta.profile"
