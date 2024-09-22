@@ -8,7 +8,7 @@ trigger.event
 
 
 entity Event <<value>> {
-[[https://terminology.hl7.org/6.0.2/ValueSet-v2-0003.html hl7v2 events]]
+Example [[https://terminology.hl7.org/6.0.2/ValueSet-v2-0003.html hl7v2 events]]
 }
 
 SubscriptionTopic "0..*" --> Event : trigger.event
