@@ -4,6 +4,7 @@
 ### Direct
 
 Is normally using in the absence of **enterprise** messaging middleware such as Trust Integration Engines (TIE) or Message Queues (MQ).
+It is typically found in **application** based integrations and may be used in the interface to **enterprise** infrstructure.
 
 [Message](https://www.enterpriseintegrationpatterns.com/patterns/messaging/Message.html)
 
@@ -39,6 +40,10 @@ It is not believed to be practical to define a single method for events or messa
 
 For examples Encounter events in FHIR will often start as existing HL7 v2 ADT Messages. They may become Topic Messages, Subscription or remain as Message
 
+Message metadata (HL7 v2 MHS, FHIR MessageHeader or http headers) **MUST** be decoupled from the payload, i.e. Organization resources **should not** be added to the message payload in order to meet data requirements of the header.
+
+The events and messages are not considered to be a record entity, they are not a method of defining record storage. Using events and messages to perform record transfer ([Data Transfer Object (DTO)](https://martinfowler.com/eaaCatalog/dataTransferObject.html)) is strongly discouraged in Enterprise settings.
+
 <img style="max-width: 50%" alt="Direct" src="events-pipes.png"/>
 <br clear="all"/>
 
@@ -46,18 +51,18 @@ For examples Encounter events in FHIR will often start as existing HL7 v2 ADT Me
 
 For detailed HL7 v2 to FHIR Mappings see [HL7 Version 2 to FHIR](https://build.fhir.org/ig/HL7/v2-to-fhir/ConceptMap-segment-msh-to-messageheader.html)
 
-| Name                | Direct / REST Headers (NHS England) | Point to Point <br/> FHIR Message R4B            | Point to Point <br/> MSH HL7 v2     | Topic Notification <br/>  FHIR Message R4B       | Subscription Notification <br/>FHIR Subscription R4B | Point to Point MESH <br/> REST Headers | 
-|---------------------|-------------------------------------|--------------------------------------------------|-------------------------------------|--------------------------------------------------|------------------------------------------------------|----------------------------------------|
-| From (Organisation) | NHSD-End-User-Organisation                                    | MessageHeader .sender .identifier                | MSH-4 Sending Facility (ODS Code)   | MessageHeader .sender .identifier                |                                                      |                                        |           
-| To (Organisation)   |           | MessageHeader .destination .receiver .identifier | MSH-6 Receiving Facility (ODS Code) | MessageHeader .destination .receiver .identifier |                                                      |                                        |           
-| From (System)       |                                     | MessageHeader .source .endpoint                  | MSH-3 Sending Application           | MessageHeader .source .endpoint                  |                                                      | mex-from                               |
-| To (System)         |                                     | MessageHeader .destination .endpoint             | MSH-5 Receiving Application         | MessageHeader .destination .endpoint             |                                                      | mex-to                                 |
-| Topic               |                                     | &#10007;                                         |                                     | eventUri (SubscriptionTopic)                     | SubscriptionStatus .topic                            |                                        |           
-| Event               |                                     | MessageHeader .eventCoding                       | MSH-9 Message Type                  | &#10007;                                         |                                                      | mex-workflowid                         |
-| Event Number        |                                     |                                                  |                                     |                                                  | SubscriptionStatus .notificationEvent                |                                        |
-| Reason              |                                     |                                                  |                                     |                                                  |                                                      |                                        |
-| Subscription        |                                     |                                                  |                                     |                                                  | SubscriptionStatus.subscription                      |                                        |
-| Timestamp           |                                     | Bundle .timestamp                                | MSH-7 Date/Time of Message          | Bundle .timestamp                                | SubscriptionStatus .notificationEvent .timestampe    |                                        |
-| Correlation ID      | X-Correlation-Id                    | Bundle .identifier                               | MSH-10 Message Control ID           | Bundle .identifier                               |                                                      | mex-localid                            |
-| Message ID          | X-Request-Id                        | MessageHeader .id                                | MSH-10 Message Control ID           | MessageHeader .id                                |                                                      | mex-messageid                          |
+| Name                | Direct / REST Headers (NHS England) | Point to Point <br/> FHIR Message R4B      | Point to Point <br/> MSH HL7 v2     | Topic Notification <br/>  FHIR Message R4B   | Subscription Notification <br/>FHIR Subscription R4B | Point to Point MESH <br/> REST Headers | 
+|---------------------|-------------------------------------|--------------------------------------------|-------------------------------------|----------------------------------------------|---------------------------------------------------|----------------------------------------|
+| From (Organisation) | NHSD-End-User-Organisation                                    | MessageHeader .sender .identifier          | MSH-4 Sending Facility (ODS Code)   | MessageHeader.sender .identifier             |                                                   |                                        |           
+| To (Organisation)   |           | MessageHeader.destination .receiver.identifier | MSH-6 Receiving Facility (ODS Code) | MessageHeader.destination .receiver.identifier |                                                   |                                        |           
+| From (System)       |                                     | MessageHeader.source .endpoint             | MSH-3 Sending Application           | MessageHeader.source .endpoint               |                                                   | mex-from                               |
+| To (System)         |                                     | MessageHeader.destination .endpoint        | MSH-5 Receiving Application         | MessageHeader.destination .endpoint          |                                                   | mex-to                                 |
+| Topic               |                                     | &#10007;                                   |                                     | eventUri (SubscriptionTopic)                 | SubscriptionStatus.topic                          |                                        |           
+| Event               |                                     | MessageHeader.eventCoding                  | MSH-9 Message Type                  | &#10007;                                     |                                                   | mex-workflowid                         |
+| Event Number        |                                     |                                            |                                     |                                              | SubscriptionStatus.notificationEvent              |                                        |
+| Reason              |                                     |                                            |                                     |                                              |                                                   |                                        |
+| Subscription        |                                     |                                            |                                     |                                              | SubscriptionStatus.subscription                   |                                        |
+| Timestamp           |                                     | Bundle.timestamp                           | MSH-7 Date/Time of Message          | Bundle .timestamp                            | SubscriptionStatus.notificationEvent .timestampe  |                                        |
+| Correlation ID      | X-Correlation-Id                    | Bundle.identifier                          | MSH-10 Message Control ID           | Bundle .identifier                           |                                                   | mex-localid                            |
+| Message ID          | X-Request-Id                        | MessageHeader.id                           | MSH-10 Message Control ID           | MessageHeader .id                            |                                                   | mex-messageid                          |
  
