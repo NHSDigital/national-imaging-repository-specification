@@ -1,5 +1,6 @@
 
-## Types of Events
+
+## Types of Notifications
 
 ### Direct
 
@@ -11,16 +12,18 @@ It is typically found in **application** based integrations and may be used in t
 <img style="max-width: 50%" alt="Direct" src="events-direct.png"/>
 <br clear="all"/>
 
-### Point to Point Notification
+
+
+### Event Notification (Point to Point)
 
 [point to point](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PointToPointChannel.html), note this is often combined with middleware to support  [Message Routing Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRoutingIntro.html) 
 
 <img style="max-width: 50%" alt="Direct" src="events-direct.png"/>
 <br clear="all"/>
 
-### Subscription Notification
+### Subscription (Topic) Notification
 
-Is a more modern way of converying events.
+Is a more modern way of converying events. It is assumed this will be topic based (colle)
 [publish subscribe](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 <img style="max-width: 50%" alt="Direct" src="events-subscription.png"/>
@@ -47,7 +50,17 @@ The events and messages are not considered to be a record entity, they are not a
 <img style="max-width: 50%" alt="Direct" src="events-pipes.png"/>
 <br clear="all"/>
 
-## Event Headers Mapping
+### Events or Topics
+
+Events can be fine-grained, for example HL7 v2 defined several events associated with a patient discharge. Topics on the other hand are coarser and can be considered a grouping of events, for example social services are probably interested in all the events associated with a patient discharge and so would want all events associated with the `patient-discharge` topic 
+
+<figure>
+{%include event-subscription-topic.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Relationship between Topics and Events</p>
+</figure>
+<br clear="all">
+
+## Message Metadata Mapping
 
 For detailed HL7 v2 to FHIR Mappings see [HL7 Version 2 to FHIR](https://build.fhir.org/ig/HL7/v2-to-fhir/ConceptMap-segment-msh-to-messageheader.html)
 
@@ -66,3 +79,11 @@ For detailed HL7 v2 to FHIR Mappings see [HL7 Version 2 to FHIR](https://build.f
 | Correlation ID      | X-Correlation-Id                    | Bundle.identifier                          | MSH-10 Message Control ID           | Bundle .identifier                           |                                                   | mex-localid                            |
 | Message ID          | X-Request-Id                        | MessageHeader.id                           | MSH-10 Message Control ID           | MessageHeader .id                            |                                                   | mex-messageid                          |
  
+## Standards Map
+
+| Name                                                                                                           | Direct | Point To Point <br/> Event Notification | Subscription Notification         | Topic Notification |
+|----------------------------------------------------------------------------------------------------------------|--------|-----------------------------------------|--------------------|--------------------|
+| [IHE Patient Administration Management (PAM)](https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html) / HL7 v2 ADT |        | &#10003;                                |                    |                    |
+| [IHE Patient Identifier Cross-referencing for mobile (PIXm)](https://profiles.ihe.net/ITI/PIXm/index.html)     |  &#10003;      |                                         |                    |                    |
+| [IHE Patient Master Identity Registry (PMIR)](https://profiles.ihe.net/ITI/PMIR/)                              |        |                                         | &#10003; (event based, not topic) |                    |
+| [IHE Document Subscription for Mobile (DSUBm)](https://profiles.ihe.net/ITI/DSUBm/index.html)                  |        |                                         | &#10003;                          |                    |
