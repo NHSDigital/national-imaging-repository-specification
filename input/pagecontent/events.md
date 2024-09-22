@@ -60,6 +60,18 @@ Events can be fine-grained, for example HL7 v2 defined several events associated
 </figure>
 <br clear="all">
 
+## Standards Map
+
+| Name                                                                                                           | Direct    | Point To Point <br/> Event Notification | Subscription Notification               | Topic Notification |
+|----------------------------------------------------------------------------------------------------------------|-----------|-----------------------------------------|-----------------------------------------|--------------------|
+| [IHE Patient Administration Management (PAM)](https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html) / HL7 v2 ADT |           | &#10003;                                |                                         |                    |
+| [IHE Patient Identifier Cross-referencing for mobile (PIXm)](https://profiles.ihe.net/ITI/PIXm/index.html)     | &#10003;  |                                         |                                         |                    |
+| [IHE Patient Master Identity Registry (PMIR)](https://profiles.ihe.net/ITI/PMIR/)                              |           |                                         | &#10003; (subcription based) |                    |
+| [IHE Document Subscription for Mobile (DSUBm)](https://profiles.ihe.net/ITI/DSUBm/index.html)                  |           |                                         | &#10003; (topic based)                  |                    |
+| [FHIR Cast](https://fhircast.org/) |  &#10003; |                                         |                                         |                    |
+| [FHIR Subscription R5](https://hl7.org/fhir/R5/subscriptions.html) [R4/R4B Backport](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/index.html)          |                       |                                         | &#10003;                                |                    |
+
+
 ## Message Metadata Mapping
 
 For detailed HL7 v2 to FHIR Mappings see [HL7 Version 2 to FHIR](https://build.fhir.org/ig/HL7/v2-to-fhir/ConceptMap-segment-msh-to-messageheader.html)
@@ -79,11 +91,3 @@ For detailed HL7 v2 to FHIR Mappings see [HL7 Version 2 to FHIR](https://build.f
 | Correlation ID      | X-Correlation-Id                    | Bundle.identifier                          | MSH-10 Message Control ID           | Bundle .identifier                           |                                                   | mex-localid                            |
 | Message ID          | X-Request-Id                        | MessageHeader.id                           | MSH-10 Message Control ID           | MessageHeader .id                            |                                                   | mex-messageid                          |
  
-## Standards Map
-
-| Name                                                                                                           | Direct | Point To Point <br/> Event Notification | Subscription Notification         | Topic Notification |
-|----------------------------------------------------------------------------------------------------------------|--------|-----------------------------------------|--------------------|--------------------|
-| [IHE Patient Administration Management (PAM)](https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html) / HL7 v2 ADT |        | &#10003;                                |                    |                    |
-| [IHE Patient Identifier Cross-referencing for mobile (PIXm)](https://profiles.ihe.net/ITI/PIXm/index.html)     |  &#10003;      |                                         |                    |                    |
-| [IHE Patient Master Identity Registry (PMIR)](https://profiles.ihe.net/ITI/PMIR/)                              |        |                                         | &#10003; (event based, not topic) |                    |
-| [IHE Document Subscription for Mobile (DSUBm)](https://profiles.ihe.net/ITI/DSUBm/index.html)                  |        |                                         | &#10003;                          |                    |
