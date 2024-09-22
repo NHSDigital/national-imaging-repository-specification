@@ -55,7 +55,7 @@ The events and messages are not considered to be a record entity, they are not a
 Events can be fine-grained, for example HL7 v2 defined several events associated with a patient discharge. Topics on the other hand are coarser and can be considered a grouping of events, for example social services are probably interested in all the events associated with a patient discharge and so would want all events associated with the `patient-discharge` topic 
 
 <figure>
-{%include event-subscription-topic.svg%}
+{%include entity-subscription-topic.svg%}
 <p id="fX.X.X.X-X" class="figureTitle">Relationship between Topics and Events</p>
 </figure>
 <br clear="all">
