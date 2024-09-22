@@ -19,5 +19,5 @@ Description:    "Details to follow"
 * entry contains
   eventHeader 1..1 MS
 
-* entry[eventHeader].resouce only EventHeader
+* entry[eventHeader].resource only EventHeader
 
