@@ -41,7 +41,7 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * subject only Reference(Patient)
 * subject only ReferencePatientIdentifier
 
-* author only Reference(Organization and Practitioner)
+* author only Reference(Organization or Practitioner)
 * author only ReferenceOrganisationIdentifier
 
 
