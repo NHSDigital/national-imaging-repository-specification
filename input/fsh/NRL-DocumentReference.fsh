@@ -9,8 +9,10 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
 
 * subject only ReferencePatientIdentifier
 
+* custodian only Reference(Organization)
 * custodian only ReferenceOrganisationIdentifier
 
+* author only Reference(Organization)
 * author ony ReferenceOrganisationIdentifier
 
 * category 1..*
