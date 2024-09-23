@@ -13,7 +13,7 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
 * custodian only ReferenceOrganisationIdentifier
 
 * author only Reference(Organization)
-* author ony ReferenceOrganisationIdentifier
+* author only ReferenceOrganisationIdentifier
 
 * category 1..*
 * category.coding 1..1
