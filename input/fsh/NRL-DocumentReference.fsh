@@ -7,7 +7,7 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
  """
 
 
-* subject only NHSNumber
+* subject only PatientIdentifier(Patient)
 
 * custodian.identifier 1..1
 * custodian.identifier.system 1..1

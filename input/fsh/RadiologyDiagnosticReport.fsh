@@ -24,6 +24,9 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * code from ImagingCodeNICIP (preferred)
 * category from Modality (preferred)
 
+* subject 1..1
+* subject only PatientIdentifier(Patient)
+
 * basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
 * basedOn[accessionNumber].type 1..1 MS
 * basedOn[accessionNumber].type = "ServiceRequest"
