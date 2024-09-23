@@ -28,7 +28,8 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 
 * context.related contains
   accessionNumber 1..1 MS
-* context.related[accessionNumber] only AccessionNumber
+* context.related[accessionNumber] only Reference(ServiceRequest)
+* context.related[accessionNumber] only ReferenceAccessionNumber
 * context.related[accessionNumber].type 1..1 MS
 * context.related[accessionNumber].type = "ServiceRequest"
 * context.related[accessionNumber].identifier 1..1
@@ -37,6 +38,7 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.related[accessionNumber].identifier.value 1..1
 
 * subject 1..1
-* subject only PatientIdentifier
+* subject only Reference(Patient)
+* subject only ReferencePatientIdentifier
 
 

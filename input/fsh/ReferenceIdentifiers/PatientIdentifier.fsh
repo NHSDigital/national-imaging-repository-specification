@@ -1,4 +1,4 @@
-Profile:        PatientIdentifier
+Profile:        ReferencePatientIdentifier
 Parent:         http://hl7.org/fhir/StructureDefinition/Reference
 Id:             patient-identifier
 Title:          "Patient Identifier"

@@ -1,4 +1,4 @@
-Profile:        AccessionNumber
+Profile:        ReferenceAccessionNumber
 Parent:         http://hl7.org/fhir/StructureDefinition/Reference
 Id:             accession-number
 Title:          "Accession Number"
