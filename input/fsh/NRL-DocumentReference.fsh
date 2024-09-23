@@ -7,10 +7,7 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
  """
 
 
-* subject.identifier 1..1
-* subject.identifier.system 1..1
-* subject.identifier.system = "https://fhir.nhs.uk/Id/nhs-number"
-* subject.identifier.value 1..1
+* subject only NHSNumber
 
 * custodian.identifier 1..1
 * custodian.identifier.system 1..1
