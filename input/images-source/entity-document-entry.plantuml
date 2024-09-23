@@ -42,8 +42,7 @@ package healthdocuments as "Health Documents" {
 
 
 package Workflow {
-  class ServiceRequestIdentifier {
-    identifier : Accession Number
+  class "[[StructureDefinition-accession-number.html ServiceRequestIdentifier]]" as ServiceRequestIdentifier {
   }
 }
 
@@ -51,9 +50,7 @@ package PatientAdministration as "Patient Administration" {
 
 
 
-  class PatientIdentifier <<value>> {
-    id
-    identifier: [[https://www.datadictionary.nhs.uk/data_elements/nhs_number.html NHS Number]]
+  class "[[StructureDefinition-patient-identifier.html PatientIdentifier]]" as PatientIdentifier <<value>> {
   }
 
 
@@ -68,13 +65,10 @@ package PatientAdministration as "Patient Administration" {
 
 package directories as "Care Directories" {
 
-class OrganisationIdentifier <<value>> {
-  identifier: [[https://www.datadictionary.nhs.uk/attributes/organisation_code.html ORGANISATION CODE]]
+class "[[StructureDefinition-organisation-identifier.html OrganisationIdentifier]]" as OrganisationIdentifier <<value>> {
 }
 
-class PractitionerIdentifier <<value>>  {
-id: SDS User Id [NHS E internal use only until API available?]
-identifier: GMP, GMC, HCPC, NMC, etc [[https://www.datadictionary.nhs.uk/data_elements/consultant_code.html CONSULTANT CODE]]
+class "[[StructureDefinition-practitioner-identifier.html PractitionerIdentifier]]" as PractitionerIdentifier <<value>>  {
 }
 
   OrganisationIdentifier -d[hidden]- PractitionerIdentifier
