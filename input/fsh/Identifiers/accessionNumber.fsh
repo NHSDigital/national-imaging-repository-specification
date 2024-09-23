@@ -3,10 +3,9 @@ Parent:         http://hl7.org/fhir/StructureDefinition/Reference
 Id:             accession-number
 Title:          "Accession Number"
 Description:     """
-accession Number
+NHS Data Dictionary [RADIOLOGICAL ACCESSION NUMBER](https://www.datadictionary.nhs.uk/data_elements/radiological_accession_number.html)
 
 """
-
 
 * type 1..1 MS
 * type = "ServiceRequest"
