@@ -52,9 +52,11 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * performer contains
   organisation 1..1 and operator 0..*
 
-* performer[organisation].identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
-* performer[organisation].type = "Organization"
-* performer[operator].type = "Practitioner"
+* performer[organisation] only Reference(Organization)
+* performer[organisation] only ReferenceOrganisationIdentifier
+
+* performer[operator] only Reference(Practitioner)
+* performer[operator] only ReferencePractitionerIdentifier
 * performer[operator].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
 
 * resultsInterpreter.identifier 1..1
@@ -74,6 +76,8 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
   secondaryReporter 0..*
 
 * resultsInterpreter[primaryReporter].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
-* resultsInterpreter[primaryReporter].type = "Practitioner"
+* resultsInterpreter[primaryReporter] only Reference(Practitioner)
+* resultsInterpreter[primaryReporter] only ReferencePractitionerIdentifier
 * resultsInterpreter[secondaryReporter].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
-* resultsInterpreter[secondaryReporter].type = "Practitioner"
+* resultsInterpreter[secondaryReporter] only Reference(Practitioner)
+* resultsInterpreter[secondaryReporter] only ReferencePractitionerIdentifier
