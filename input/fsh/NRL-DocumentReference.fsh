@@ -9,15 +9,9 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
 
 * subject only ReferencePatientIdentifier
 
-* custodian.identifier 1..1
-* custodian.identifier.system 1..1
-* custodian.identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
-* custodian.identifier.value 1..1
+* custodian only ReferenceOrganisationIdentifier
 
-* author.identifier 1..1
-* author.identifier.system 1..1
-* author.identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
-* author.identifier.value 1..1
+* author ony ReferenceOrganisationIdentifier
 
 * category 1..*
 * category.coding 1..1
