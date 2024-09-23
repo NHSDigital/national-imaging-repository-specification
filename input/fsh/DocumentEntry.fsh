@@ -35,7 +35,6 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.related[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
 * context.related[accessionNumber].identifier.value 1..1
 
-* subject.identifier 1..1
-* subject.identifier.system 1..1
-* subject.identifier.value 1..1
+* subject only PatientIdentifier
+
 

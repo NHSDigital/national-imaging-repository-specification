@@ -1,7 +1,7 @@
-Profile:        NHSNumber
+Profile:        PatientIdentifier
 Parent:         http://hl7.org/fhir/StructureDefinition/Reference
-Id:             nhs-number
-Title:          "NHS Number"
+Id:             patient-identifier
+Title:          "Patient Identifier"
 Description:     """
 Only traced NHS Number may be used.
 
