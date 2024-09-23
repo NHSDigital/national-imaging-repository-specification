@@ -21,13 +21,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * basedOn contains
   accessionNumber 0..1 MS
 
-* code from ImagingCodeNICIP (preferred)
-* category from Modality (preferred)
-
-* subject 1..1
-* subject only Reference(Patient)
-* subject only PatientIdentifier
-
+* basedOn[accessionNumber] only AccessionNumber
 * basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
 * basedOn[accessionNumber].type 1..1 MS
 * basedOn[accessionNumber].type = "ServiceRequest"
@@ -35,6 +29,13 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * basedOn[accessionNumber].identifier.system 1..1
 * basedOn[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
 * basedOn[accessionNumber].identifier.value 1..1
+
+* code from ImagingCodeNICIP (preferred)
+* category from Modality (preferred)
+
+* subject 1..1
+* subject only Reference(Patient)
+* subject only PatientIdentifier
 
 * performer.identifier 1..1
 * performer.identifier.system 1..1

@@ -28,6 +28,7 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 
 * context.related contains
   accessionNumber 1..1 MS
+* context.related[accessionNumber] only AccessionNumber
 * context.related[accessionNumber].type 1..1 MS
 * context.related[accessionNumber].type = "ServiceRequest"
 * context.related[accessionNumber].identifier 1..1
