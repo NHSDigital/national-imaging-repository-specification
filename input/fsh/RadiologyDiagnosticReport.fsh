@@ -25,7 +25,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * category from Modality (preferred)
 
 * subject 1..1
-* subject only PatientIdentifier(Patient)
+* subject only PatientIdentifier
 
 * basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
 * basedOn[accessionNumber].type 1..1 MS

@@ -36,6 +36,6 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.related[accessionNumber].identifier.value 1..1
 
 * subject 1..1
-* subject only PatientIdentifier(Patient)
+* subject only PatientIdentifier
 
 
