@@ -33,8 +33,16 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * basedOn[accessionNumber].identifier.value 1..1
 
 * subject.identifier 1..1
-* subject.identifier.system 1..1
-* subject.identifier.value 1..1
+* subject.identifier ^slicing.discriminator.type = #pattern
+* subject.identifier ^slicing.discriminator.path = "system"
+* subject.identifier ^slicing.rules = #open
+* subject.identifier ^slicing.description = "Slice based on the type"
+* subject.identifier ^slicing.ordered = false
+* subject.identifier contains
+  nhsNumber 0..1 MS
+
+* subject.identifier[nhsNumber] only NHSNumber
+
 
 * performer.identifier 1..1
 * performer.identifier.system 1..1
