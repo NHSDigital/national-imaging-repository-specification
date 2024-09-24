@@ -66,9 +66,6 @@ pages:
   usecase-imaging.md:
     title: Imaging
     generation: markdown
-  events.md:
-    title: Events and Messages
-    generation: markdown
 menu:
   Home: index.html
   Usecase: usecase-imaging.html
