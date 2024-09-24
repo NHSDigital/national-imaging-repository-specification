@@ -16,7 +16,7 @@ package healthdocuments as "Radiology" {
     effectiveDateTime
     encounter: EncounterIdentifier
     attachment : Attachment
-    basedOn: ServiceRequestIdentifier
+    basedOn: Radiological Accession Number
   }
 
   entity "Attachment" as attachment <<entity>> {
@@ -33,7 +33,7 @@ package healthdocuments as "Radiology" {
 
 
 package Workflow {
-  class "[[StructureDefinition-accession-number.html ServiceRequestIdentifier]]" as ServiceRequestIdentifier {
+  class "[[StructureDefinition-accession-number.html Radiological Accession Number]]" as RadiologicalAccessionNumber <<value>> {
   }
 }
 
@@ -75,7 +75,7 @@ class "[[StructureDefinition-practitioner-identifier.html PractitionerIdentifier
   diagnosticReport o--> EncounterIdentifier: encounter
   diagnosticReport o-d-> OrganisationIdentifier : performer [organisation]
   diagnosticReport o--> PractitionerIdentifier: performer [reporter and technician]
-  diagnosticReport o--> ServiceRequestIdentifier: basedOn
+  diagnosticReport o--> RadiologicalAccessionNumber: basedOn
 
 
 @enduml

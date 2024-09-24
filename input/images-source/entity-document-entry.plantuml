@@ -16,7 +16,7 @@ package healthdocuments as "Health Documents" {
     period : Period
     encounter: EncounterIdentifier
     attachment : Attachment
-    related: ServiceRequestIdentifier
+    related: Radiological Accession Number
   }
 
   entity "Attachment" as attachment <<entity>> {
@@ -42,7 +42,7 @@ package healthdocuments as "Health Documents" {
 
 
 package Workflow {
-  class "[[StructureDefinition-accession-number.html ServiceRequestIdentifier]]" as ServiceRequestIdentifier {
+  class "[[StructureDefinition-accession-number.html Radiological Accession Number]]" as RadiologicalAccessionNumber {
   }
 }
 
@@ -88,7 +88,7 @@ document -d-> PatientIdentifier : subject
   document o--> EncounterIdentifier: encounter
   document o-d-> OrganisationIdentifier : custodian and author
   document o--> PractitionerIdentifier: author
-  document o--> ServiceRequestIdentifier: related
+  document o--> RadiologicalAccessionNumber: related
 
 
 @enduml
