@@ -1,0 +1,45 @@
+@startmindmap
+
+<style>
+mindmapDiagram {
+  .green {
+    BackgroundColor greenyellow
+  }
+  .rose {
+    BackgroundColor lightpink
+  }
+  .blue {
+    BackgroundColor lightblue
+  }
+  .amber {
+    BackgroundColor khaki
+  }
+}
+</style>
+
+
+
+* [[https://build.fhir.org/ig/HL7/fhir-ips/index.html International Patient Summary]]\n[[https://hl7.org/fhir/R4/documents.html FHIR Document (Bundle)]]
+** subject (patient) <<blue>>
+** author <<blue>>
+** attester <<blue>>
+** custodian <<blue>>
+** section
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#medication-summary Medication Summary]] <<rose>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#allergies-and-intolerances Allergies and Intolerances]] <<rose>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#problem-list Problems]] <<rose>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#history-of-procedures History of Procedures]] <<amber>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#immunizations Immunisations]] <<amber>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#medical-devices Medical Devices]] <<amber>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#medical-devices Results]] <<amber>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#vital-signs Vital Signs]]  <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#past-history-of-illnesses Hisotry of Past Problems]] <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#functional-status Functional Status]]  <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#plan-of-cares Plan of Care]]  <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#social-history Social History]]   <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#pregnancy-status-and-history-summary Pregnancy]]   <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#advance-directives Advanced Directives]]   <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#alerts Alerts]]  <<green>>
+*** [[https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#patient-story Patient Storey]]  <<green>>
+
+@endmindmap

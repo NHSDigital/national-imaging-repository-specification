@@ -1,0 +1,67 @@
+@startuml
+
+
+package healthdocuments as "Health Documents" {
+
+  note "Also known as Health Record Content. This specifies the underlying specifications for Health Records\nand is known here as Health Documents\n\nThis is one of two ways of sharing health records. For health data see [[subdomain-health-data.html Health Records]]\n\nWhich one is used depends on use case and systems capability." as DDA
+  entity Document {
+  }
+  note right
+  E.g. PDF or html
+  end note
+
+
+  entity "[[StructureDefinition-Composition.html Composition]]" as Composition <<aggregate root>> {}
+  note right
+  E.g. Discharge Letters, Imaging Reports,
+  Laboratory Reports.
+
+  Is available as html
+  end note
+
+
+
+  entity "[[StructureDefinition-Message.html Message]]" as Message {}
+  note right
+  E.g. HL7 v2 ORU (Laboratory & Imaging Report)
+  and OML (Laboratory Order)
+
+  Is often made available as PDF in
+  document repositories
+
+  Ideally refactor as Composition
+  end note
+
+
+
+  entity "[[StructureDefinition-Form.html Form]]" as Form {
+  }
+  note right
+  Assessments, 'Care Plan',
+  Risk Assessments, ReSPECT,
+  Consent, Release, etc
+
+  Is often made available as PDF in
+  document repositories
+  end note
+
+
+  Composition -u-|> Document
+  Form -u-|> Document
+  Message -u-|> Composition
+
+
+}
+
+  package "[[subdomain-radiology.html Radiology]]" as Imaging {
+
+  entity "[[StructureDefinition-ImagingStudy.html Imaging Study]]" as ImagingStudy {
+  }
+
+  entity "[[StructureDefinition-Image.html Image]]" as DICOM {
+  }
+    ImagingStudy -u-|> Document
+  DICOM -u-|> ImagingStudy
+}
+
+@enduml
