@@ -3,10 +3,10 @@
 hide footbox
 skinparam svgDimensionStyle false
 
-actor "Clinician \n\n**Client Application**"  as C
-participant "Electronic Document Management System (EDMS)\n\n**Document Registry**" as HS
-participant "Electronic Document Management System (EDMS)\n\n**Document Repository**" as DR
-participant "Picture archiving and communication system (PACS)\n\n**Image Repository**" as P
+actor "Document Consumer"  as C
+participant "Document Registry" as HS
+participant "Document Repository" as DR
+participant "Image Repository" as P
 
 == Search and Retrieve Imaging Studies and Reports ==
 C -> C : Initiate search for patient imaging studies (including patient identifier and query parameters)

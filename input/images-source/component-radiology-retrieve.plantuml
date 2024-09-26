@@ -16,7 +16,7 @@ DocumentRegistry -d[hidden]- DocumentRepository
 DocumentRepository -d[hidden]- ImageRepository
 
 
-DocumentConsumer -r-> DocumentRegistry : Query for Image Study, Report or Image
+DocumentConsumer -r-> DocumentRegistry : Query for Image Studies and Reports
 DocumentConsumer -r-> DocumentRepository : Retrieve Image Report
 DocumentConsumer -r-> ImageRepository : Retrieve Image Study or Image
 
