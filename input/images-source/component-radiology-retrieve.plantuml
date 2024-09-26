@@ -1,0 +1,25 @@
+@startuml
+
+
+
+actor DocumentConsumer
+
+
+
+
+
+component DocumentRegistry
+component DocumentRepository
+component ImageRepository
+
+DocumentRegistry -d[hidden]- DocumentRepository
+DocumentRepository -d[hidden]- ImageRepository
+
+
+DocumentConsumer -r-> DocumentRegistry : Query for Image Study, Report or Image
+DocumentConsumer -r-> DocumentRepository : Retrieve Image Report
+DocumentConsumer -r-> ImageRepository : Retrieve Image Study or Image
+
+
+
+@enduml

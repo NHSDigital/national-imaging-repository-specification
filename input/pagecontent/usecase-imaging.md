@@ -22,7 +22,15 @@ NHS Radiology faces significant challenges in enabling inter-organisational acce
 | Image Repository    | The Imaging Repository is responsible for both the persistent storage of DICOM Images and Imaging Studies, these may also contain Imaging Reports. This is also known as a PACS.                                                                                                                 |
 | Document Consumer | The Document Consumer Actor queries for documents meeting certain criteria, and may retrieve selected documents.                                                                                                                                                                                                                                                                                                 |
 
+<figure>
+{%include component-radiology-retrieve.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Sequence Diagram</p>
+</figure>
+<br clear="all">
+
 ## Use Case 
+
+TODO
 
 ### Process Flow
 
