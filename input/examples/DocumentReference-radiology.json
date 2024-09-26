@@ -3,7 +3,7 @@
   "id": "document-reference-radiology",
   "meta": {
     "profile": [
-      "https://fhir.nhs.uk/NIR/StructureDefinition/DocumentEntry"
+      "https://fhir.nhs.uk/England/RAD/StructureDefinition/DocumentEntry"
     ]
   },
   "status": "current",
