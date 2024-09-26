@@ -3,10 +3,10 @@
 # the id should be lowercase made up of "ihe." + {domain acronym} + "." + {profile acronym/short-name}
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: nhs.england.nir
-canonical: https://fhir.nhs.uk/NIR
+canonical: https://fhir.nhs.uk/England/RAD
 version: 0.0.1-current
 name: NIR_England_National_Imaging_Registry
-title: "National Imaging Registry"
+title: "NHS England Radiology"
 description: put the short description of the profile here. it should explain what problem is being solved
 releaseLabel: ci-build
 
