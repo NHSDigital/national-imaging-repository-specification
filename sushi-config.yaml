@@ -2,7 +2,7 @@
 # ───────────────────────────────────────────────────
 # the id should be lowercase made up of "ihe." + {domain acronym} + "." + {profile acronym/short-name}
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
-id: nhs.england.nir
+id: nhs.england.rad
 canonical: https://fhir.nhs.uk/England/RAD
 version: 0.0.1-current
 name: NIR_England_National_Imaging_Registry
