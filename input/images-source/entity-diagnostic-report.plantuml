@@ -11,8 +11,8 @@ package healthdocuments as "Radiology" {
     performer [primary reporter]:   PractitionerIdentifier
     performer [secondary reporter]:   PractitionerIdentifier
     performer [technician]:   PractitionerIdentifier
-    category: [[https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html Modality]]
-    code: [[https://www.datadictionary.nhs.uk/data_elements/imaging_code__nicip_.html IMAGING CODE (NICIP)]]
+    category: [[ValueSet-modality.html Modality]]
+    code: [[ValueSet-imaging-code-nicip.html IMAGING CODE (NICIP)]]
     effectiveDateTime
     encounter: EncounterIdentifier
     attachment : Attachment
