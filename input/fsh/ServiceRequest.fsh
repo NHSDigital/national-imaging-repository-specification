@@ -1,5 +1,5 @@
 Profile:        ServiceRequest
-Parent:         https://profiles.ihe.net/RAD/IMR/StructureDefinition/imr-servicerequest
+Parent:         http://hl7.org/fhir/StructureDefinition/ServiceRequest
 Id:             ServiceRequest-Radiology
 Title:          "Radiology ServiceRequest"
 Description:    "Ignore, just a collection of notes."
