@@ -42,6 +42,6 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * subject.identifier only NHSNumber
 
 * author only Reference(Organization or Practitioner)
-* author.identity only OrganisationCode
+* author.identifier only OrganisationCode
 
 

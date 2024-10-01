@@ -14,11 +14,11 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
 
 * custodian only Reference(Organization)
 * custodian.identifier 1..1
-* custodian.identity only OrganisationCode
+* custodian.identifier only OrganisationCode
 
 * author only Reference(Organization)
 * author.identifier 1..1
-* author.identity only OrganisationCode
+* author.identifier only OrganisationCode
 
 * category 1..*
 * category.coding 1..1
