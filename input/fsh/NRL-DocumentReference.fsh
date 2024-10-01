@@ -7,13 +7,18 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
  """
 
 
-* subject only ReferencePatientIdentifier
+* subject 1..1
+* subject.identifier 1..1
+* subject only Reference(Patient)
+* subject.identifier only NHSNumber
 
 * custodian only Reference(Organization)
-* custodian only ReferenceOrganisationIdentifier
+* custodian.identifier 1..1
+* custodian.identity only OrganisationCode
 
 * author only Reference(Organization)
-* author only ReferenceOrganisationIdentifier
+* author.identifier 1..1
+* author.identity only OrganisationCode
 
 * category 1..*
 * category.coding 1..1

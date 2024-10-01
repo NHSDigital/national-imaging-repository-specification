@@ -39,9 +39,9 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 
 * subject 1..1
 * subject only Reference(Patient)
-* subject only ReferencePatientIdentifier
+* subject.identifier only NHSNumber
 
 * author only Reference(Organization or Practitioner)
-* author only ReferenceOrganisationIdentifier
+* author.identity only OrganisationCode
 
 

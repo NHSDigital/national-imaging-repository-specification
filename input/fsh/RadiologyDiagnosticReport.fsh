@@ -35,8 +35,9 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * category from Modality (preferred)
 
 * subject 1..1
+* subject.identifier 1..1
 * subject only Reference(Patient)
-* subject only ReferencePatientIdentifier
+* subject.identifier only NHSNumber
 
 * performer.identifier 1..1
 * performer.identifier.system 1..1
@@ -53,10 +54,10 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
   organisation 1..1 and operator 0..*
 
 * performer[organisation] only Reference(Organization)
-* performer[organisation] only ReferenceOrganisationIdentifier
+* performer[organisation].identifier only OrganisationCode
 
 * performer[operator] only Reference(Practitioner)
-* performer[operator] only ReferencePractitionerIdentifier
+* performer[operator].identifier only GeneralMedicalCouncilReferenceNumber
 * performer[operator].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
 
 * resultsInterpreter.identifier 1..1
@@ -77,7 +78,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 
 * resultsInterpreter[primaryReporter].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
 * resultsInterpreter[primaryReporter] only Reference(Practitioner)
-* resultsInterpreter[primaryReporter] only ReferencePractitionerIdentifier
+* resultsInterpreter[primaryReporter].identifier only GeneralMedicalCouncilReferenceNumber
 * resultsInterpreter[secondaryReporter].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
 * resultsInterpreter[secondaryReporter] only Reference(Practitioner)
-* resultsInterpreter[secondaryReporter] only ReferencePractitionerIdentifier
+* resultsInterpreter[secondaryReporter].identifier only GeneralMedicalCouncilReferenceNumber
