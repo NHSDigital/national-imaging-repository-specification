@@ -33,9 +33,7 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.related[accessionNumber].type 1..1 MS
 * context.related[accessionNumber].type = "ServiceRequest"
 * context.related[accessionNumber].identifier 1..1
-* context.related[accessionNumber].identifier.system 1..1
-* context.related[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
-* context.related[accessionNumber].identifier.value 1..1
+* context.related[accessionNumber].identifier only AccessionNumber
 
 * subject 1..1
 * subject only Reference(Patient)

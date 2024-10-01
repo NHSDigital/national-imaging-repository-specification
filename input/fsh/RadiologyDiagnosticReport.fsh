@@ -22,14 +22,11 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
   accessionNumber 0..1 MS
 
 * basedOn[accessionNumber] only Reference(ServiceRequest)
-* basedOn[accessionNumber] only ReferenceAccessionNumber
 * basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
 * basedOn[accessionNumber].type 1..1 MS
 * basedOn[accessionNumber].type = "ServiceRequest"
 * basedOn[accessionNumber].identifier 1..1
-* basedOn[accessionNumber].identifier.system 1..1
-* basedOn[accessionNumber].identifier.system ^short = "uri should be defined and unique supplying organisation."
-* basedOn[accessionNumber].identifier.value 1..1
+* basedOn[accessionNumber].identifier only AccessionNumber
 
 * code from ImagingCodeNICIP (preferred)
 * category from Modality (preferred)
