@@ -44,5 +44,4 @@ Built from [National Record Locator - FHIR API v3 - Producer - Create new, or Su
   asid 0..1
 
 * context.related[asid].identifier 1..1
-* context.related[asid].identifier.system = "https://fhir.nhs.uk/Id/nhsSpineASID"
-* context.related[asid].identifier.value 1..1
+* context.related[asid].identifier only ASID

@@ -54,7 +54,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 * performer[organisation].identifier only OrganisationCode
 
 * performer[operator] only Reference(Practitioner)
-* performer[operator].identifier only GeneralMedicalCouncilReferenceNumber
+* performer[operator].identifier only GeneralMedicalPractitionerCode or GeneralMedicalCouncilReferenceNumber
 * performer[operator].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
 
 * resultsInterpreter.identifier 1..1
@@ -75,7 +75,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
 
 * resultsInterpreter[primaryReporter].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
 * resultsInterpreter[primaryReporter] only Reference(Practitioner)
-* resultsInterpreter[primaryReporter].identifier only GeneralMedicalCouncilReferenceNumber
+* resultsInterpreter[primaryReporter].identifier only GeneralMedicalPractitionerCode or GeneralMedicalCouncilReferenceNumber
 * resultsInterpreter[secondaryReporter].extension[performerFunction].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
 * resultsInterpreter[secondaryReporter] only Reference(Practitioner)
-* resultsInterpreter[secondaryReporter].identifier only GeneralMedicalCouncilReferenceNumber
+* resultsInterpreter[secondaryReporter].identifier only GeneralMedicalPractitionerCode or GeneralMedicalCouncilReferenceNumber
