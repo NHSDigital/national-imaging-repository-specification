@@ -7,8 +7,9 @@ Description:     """
 
 Format CNNNNNNN
 
-HL7 v3/OID: 2.16.840.1.113883.2.1.3.2.4.16.63
-HL7 v2: GMC
+- HL7 v3/OID: 2.16.840.1.113883.2.1.3.2.4.16.63
+- HL7 v2: GMC
+- HL7 FHIR https://fhir.hl7.org.uk/Id/gmc-number
 """
 
 * system 1..1
