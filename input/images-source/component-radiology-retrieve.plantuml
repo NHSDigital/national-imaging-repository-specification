@@ -12,12 +12,9 @@ component DocumentRegistry
 component DocumentRepository
 component ImageRepository
 
-interface "Interface Contract IHE MHD/XDS\nAPI Specification NRL" as IC
-interface "Interface Contract IHE MHD/XDS and NRL" as IC2
-interface "Interface Contract IHE MHD/XDS and NRL" as IC3
-
-
-
+interface "Interface Contract [[CapabilityStatement-NHSE-CIC-8-MHD.html IHE MHD ITI-67]]/XDS\nAPI Specification NRL" as IC
+interface "Interface Contract [[https://profiles.ihe.net/ITI/MHD/ITI-68.html IHE MHD ITI-68]]/XDS and NRL" as IC2
+interface "Interface Contract IHE ??? and NRL" as IC3
 
 DocumentConsumer --> IC : Query for Image Studies and Reports
 IC --> DocumentRegistry
@@ -25,7 +22,6 @@ DocumentConsumer --> IC2  : Retrieve Image Report
 IC2 --> DocumentRepository
 DocumentConsumer --> IC3 : Retrieve Image Study or Image
 IC3 --> ImageRepository
-
 
 
 @enduml
