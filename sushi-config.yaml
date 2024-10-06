@@ -69,5 +69,5 @@ pages:
     generation: markdown
 menu:
   Home: index.html
-  Usecase: usecase-imaging.html
+  Use Case: usecase-imaging.html
   Artefacts: artifacts.html
