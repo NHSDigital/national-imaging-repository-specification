@@ -278,6 +278,17 @@ RuleSet: SearchBundle(count, search)
   * relation = "self"
   * url = "{search}"
 
+RuleSet: TransactionBundle(timestamp)
+* type = #transaction
+* timestamp = {timestamp}
+
+RuleSet: AddTransactionEntry(type, resourceId,uri)
+* entry[+]
+  * fullUrl = "http://example.org/fhir/{type}/{resourceId}"
+  * resource = {resourceId}
+  * request.method = #POST
+  * request.url = {uri}
+
 RuleSet: EntryMatch(type, resourceId)
 * entry[+]
   * fullUrl = "http://example.org/fhir/{type}/{resourceId}"

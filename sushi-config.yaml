@@ -33,7 +33,11 @@ dependencies:
     uri: https://simplifier.net/guide/ukcoreversionhistory
   ihe.iti.mhd: 4.2.1  
   ihe.rad.imr: 1.1.0
-
+  hl7.fhir.extensions.r5:
+    id: r5ext
+    version: 4.0.1
+    reason: |
+      Makes available certain R5 elements for use as part of this R4 IG
 
 FSHOnly: false
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
