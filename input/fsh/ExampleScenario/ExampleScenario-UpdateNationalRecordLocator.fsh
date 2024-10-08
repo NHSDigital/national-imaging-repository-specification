@@ -25,7 +25,7 @@ Usage: #definition
   * insert ProcessCreate(1, "IHE Transaction Feed",  xds, translation, IHETransactionFeed, ,         [[ This may also be a [IHE DSUBm Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or similar [event-messaging](https://en.wikipedia.org/wiki/Event-driven_messaging) ]])
 * process[+]
   * title = "Update NRL"
-  * insert ProcessCreate(1, "NRL Transaction Feed",  translation, nrl, NRLTransactionFeed, ,         [[ ]])
+  * insert ProcessCreate(1, "NRL Transaction Feed",  translation, nrl, NRLTransactionFeed, ,         [[ This is a [FHIR Transaction](https://hl7.org/fhir/R4/http.html#transaction) not containing a List/SubmissionSet, a document (Binary) and neither a document attached to the DocumentReference ]])
 
 
 Instance: ListExample
