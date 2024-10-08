@@ -23,7 +23,7 @@ Usage: #example
 
 * content.attachment[+]
   * contentType = #application/fhir+json
-  * url = "https://an-ris-system.org.nhs.uk/some-path/FHIR/R4/DiagnosticReport?_id=c9d0e5e3-ac48-4285-8f9c-af9b30d235f1"
+  * url = "https://example.nhs.uk/FHIR/R4/DocumentReference?_id=DiagnosticReportRadiologyPlatforms"
   * title = "Diagnostic Studies Report"
   * creation = "2023-10-22T09:31:45+00:00"
 * content.format.code = #apiplatform

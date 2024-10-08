@@ -33,7 +33,7 @@ NHS Radiology faces significant challenges in enabling inter-organisational acce
 ### Searching and Retrieving an Image
 
 <figure>
-<img style="max-width: 50%" alt="Overview Radiology" src="rich-picture-radiology.png"/>
+<img style="max-width: 90%" alt="Overview Radiology" src="rich-picture-radiology.png"/>
 <p id="fX.X.X.X-X" class="figureTitle">Process Diagram</p>
 </figure>
 <br clear="all"/>
@@ -54,7 +54,7 @@ NHS Radiology faces significant challenges in enabling inter-organisational acce
 #### Process Flow
 
 <figure>
-<img style="max-width: 50%" alt="Process Diagram Image" src="bpmn-radiology-retrieval.png"/>
+<img style="max-width: 90%" alt="Process Diagram Image" src="bpmn-radiology-retrieval.png"/>
 <p id="fX.X.X.X-X" class="figureTitle">Process Diagram</p>
 </figure>
 <br clear="all"/>
