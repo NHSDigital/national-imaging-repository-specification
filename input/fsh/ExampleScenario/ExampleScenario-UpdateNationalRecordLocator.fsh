@@ -10,7 +10,7 @@ Usage: #definition
 * name = "UpdateNationalRecordLocator"
 
 * insert ActorEntity(xds,  "Document Registry - IHE ", [[IHE XDS, MHD or MHDS System]])
-* insert ActorEntity(translation,  "Transformation Service",         [[Converts IHE Document Entry or IHE FHIR Document Reference to NRL version]])
+* insert ActorEntity(translation,  "Transformation Service",         [[Converts IHE Document Entry or IHE FHIR Document Reference to NRL version. Filter entries which are not currently supported by NRL]])
 * insert ActorEntity(nrl,  "Document Registry - NHS England NRL",         [[NHS England National Record Locator]])
 
 
