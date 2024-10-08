@@ -17,12 +17,12 @@ Usage: #definition
 * insert Instance_Empty(IHETransactionFeed, Bundle,   "IHE ITI-65", [[ This may also be a [IHE DSUBm Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or similar [event-messaging](https://en.wikipedia.org/wiki/Event-driven_messaging) ]])
 * insert InstanceVersion(1, "Bundle", IHETransactionBundle,  )
 
-* insert Instance_Empty(NRLTransactionFeed, Bundle,   "NRL version of IHE ITI-65", [[ ]])
+* insert Instance_Empty(NRLTransactionFeed, Bundle,   "NRL version of IHE ITI-65", [[  ]])
 * insert InstanceVersion(1, "Bundle", NRLTransactionBundle,  )
 
 * process[+]
   * title = "Document Entry Update Feed"
-  * insert ProcessCreate(1, "IHE Transaction Feed",  xds, translation, IHETransactionFeed, ,         [[ ]])
+  * insert ProcessCreate(1, "IHE Transaction Feed",  xds, translation, IHETransactionFeed, ,         [[ This may also be a [IHE DSUBm Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or similar [event-messaging](https://en.wikipedia.org/wiki/Event-driven_messaging) ]])
 * process[+]
   * title = "Update NRL"
   * insert ProcessCreate(1, "NRL Transaction Feed",  translation, nrl, NRLTransactionFeed, ,         [[ ]])
