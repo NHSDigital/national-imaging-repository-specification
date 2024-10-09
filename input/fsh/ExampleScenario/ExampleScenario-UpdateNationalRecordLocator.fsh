@@ -21,7 +21,7 @@ Usage: #definition
 
 * insert Instance_Empty(IHETransactionFeed, Bundle, "IHE DSUBm ITI-112", [[ [IHE DSUBm - Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or  [IHE Document Metadata Subscription (DSUB)](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) ]])
 
-* insert Instance_Empty(NRLTransactionFeed, Bundle,   "NRL version of IHE ITI-65", [[  ]])
+* insert Instance_Empty(NRLTransactionFeed, Bundle,   "NRL version of IHE ITI-65", [[ This is a [FHIR Transaction](https://hl7.org/fhir/R4/http.html#transaction) not containing a List/SubmissionSet, a document (Binary) and neither a document attached to the DocumentReference ]])
 * insert InstanceVersion(1, "Bundle", NRLTransactionBundle,  )
 
 * insert Instance_Empty(NRLRegisterDocument, DocumentReference,  "Register Document Entry", [[  ]])
@@ -35,10 +35,10 @@ Usage: #definition
   * insert ProcessCreate(1, "Update Document Registry",  docRecipient, docRegistry, NRLRegisterDocument, ,         [[  ]])
 * process[+]
   * title = "Document Entry Event Feed (DSUB Document Metadata Notify)"
-  * insert ProcessCreateEvent(1, "IHE DSUBm Resource Notify",  docRecipient, translation, IHETransactionFeed, ,         [[ This may also be a [IHE DSUBm Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or similar [event-messaging](https://en.wikipedia.org/wiki/Event-driven_messaging) ]])
+  * insert ProcessCreateEvent(1, "IHE DSUBm Resource Notify",  docRecipient, translation, IHETransactionFeed, ,         [[  ]])
 * process[+]
   * title = "Update NRL"
-  * insert ProcessCreate(1, "NRL Transaction Feed",  translation, nrl, NRLTransactionFeed, ,         [[ This is a [FHIR Transaction](https://hl7.org/fhir/R4/http.html#transaction) not containing a List/SubmissionSet, a document (Binary) and neither a document attached to the DocumentReference ]])
+  * insert ProcessCreate(1, "NRL Transaction Feed",  translation, nrl, NRLTransactionFeed, ,         [[  ]])
 
 Instance: ListExample
 InstanceOf: List
