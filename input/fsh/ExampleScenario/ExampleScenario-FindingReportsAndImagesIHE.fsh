@@ -1,4 +1,4 @@
-Instance: FindingReportsAndImagesIHE
+Instance: FindingReportsAndImagesFederated
 InstanceOf: ExampleScenario
 Title:       "Finding Imaging Reports and Images - Federated (IHE)"
 Description: """
@@ -10,7 +10,7 @@ New method of populating NRL from IHE XDS or like systems
 Usage: #definition
 
 * status = #draft
-* name = "FindingImagingReportsStudiesAndImagesIHE"
+* name = "FindingImagingReportsStudiesAndImagesFederated"
 
 * insert ActorEntity(user, "Document Consumer",         [[The Document Consumer Actor queries for documents meeting certain criteria, and may retrieve selected documents.]])
 * insert ActorEntity(xds, "Document Registry", [[The Document Registry Actor maintains metadata about each registered document in a document entry. This includes a link to the Document in the Repository where it is stored. The Document Registry responds to queries from Document Consumer actors about documents meeting specific criteria.]])
