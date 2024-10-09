@@ -1,7 +1,7 @@
-Instance: DocumentReferenceImagingReportNRL
+Instance: DocumentReferenceImagingStudyNRL
 InstanceOf: DocumentReference
-Title: "DocumentReference NRL for a Imaging Report"
-Description: "Document Reference NRL"
+Title: "DocumentReference NRL for a Imaging Study"
+Description: "DocumentReference NRL for a Imaging Study"
 Usage: #example
 
 * status = #current
@@ -11,7 +11,7 @@ Usage: #example
   * value = "Y05868.123456789"
   * type.text = "Accession-Number"
 
-* category.coding[+] = $sct#4201000179104 "Imaging report"
+* category.coding[+] = $sct#721981007 "Diagnostic studies report"
 
 * subject.identifier
   * system = "https://fhir.nhs.uk/Id/nhs-number"
@@ -22,12 +22,12 @@ Usage: #example
 * custodian.display = "LEEDS TEACHING HOSPITALS NHS TRUST"
 
 * content.attachment[+]
-  * contentType = #application/fhir+json
-  * url = "https://example.nhs.uk/FHIR/R4/DocumentReference?_id=DiagnosticReportRadiologyPlatforms"
-  * title = "Imaging Report"
+  * contentType = #application/dicom+json
+  * url = "https://a-pacs-system.org.nhs.uk/some-path/wado-rs/studies/7a530b22-688e-4623-876f-48d0037007ba/metadata"
+  * title = "Diagnostic Studies Report"
   * creation = "2023-10-22T09:31:45+00:00"
-* content.format.code = #apiplatform
-* content.format.display = "API Platform"
+* content.format.code = #direct
+* content.format.display = "Direct"
 
 
 

@@ -44,7 +44,7 @@ This is [IHE Mobile access to Health Documents (MHD) - Find Document References 
 
     #### Example
 
-    `GET /DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888`
+    `GET /DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&category=http://snomed.info/sct|721981007,http://snomed.info/sct|4201000179104`
 
     Example response:
     - [Document Reference Search Results MHD](Bundle-MHDSearchResultsDocuments.html)

@@ -1,7 +1,7 @@
-Instance: DocumentReferenceImagingReportIHE
+Instance: DocumentReferenceImagingStudyIHE
 InstanceOf: DocumentEntry
-Title: "DocumentReference IHE for a Imaging Report - can be also be in IHE XDS Document Entry format"
-Description: "DocumentReference IHE for a Imaging Report"
+Title: "DocumentReference IHE for a Imaging Study"
+Description: "DocumentReference IHE for a Imaging Study - can be also be in IHE XDS Document Entry format"
 Usage: #example
 
 
@@ -13,7 +13,7 @@ Usage: #example
 * masterIdentifier.system = "https://tools.ietf.org/html/rfc4122"
 * masterIdentifier.value = "f3f7920b-3b91-4e3e-afdc-8791e2095fbe"
 
-* category.coding[+] = $sct#4201000179104 "Imaging report"
+* category.coding[+] = $sct#721981007 "Diagnostic studies report"
 * category.coding[+] = $sct#113091000 "Magnetic resonance imaging (procedure)"
 
 * subject.identifier
@@ -26,8 +26,8 @@ Usage: #example
 * custodian.display = "LEEDS TEACHING HOSPITALS NHS TRUST"
 
 * content.attachment[+]
-  * contentType = #application/fhir+json
-  * url = Canonical(DiagnosticReportImagingReportRCR)
+  * contentType = #application/dicom+json
+  * url = "https://a-pacs-system.org.nhs.uk/some-path/wado-rs/studies/7a530b22-688e-4623-876f-48d0037007ba/metadata"
   * creation = "2023-10-22T09:31:45+00:00"
   * language = urn:ietf:bcp:47#en-GB
 * content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:rad "Radiology Domain"

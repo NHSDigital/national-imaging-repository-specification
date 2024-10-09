@@ -19,8 +19,7 @@ The actual API is:
 * date = "2024-04-20"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[+] = #application/fhir+xml
-* format[+] = #application/fhir+json
+* format[+] = #application/dicom+json
 * rest
   * mode = #server
   * security
