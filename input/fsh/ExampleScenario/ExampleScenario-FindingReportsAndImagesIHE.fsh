@@ -1,4 +1,4 @@
-Instance: FindingReportsAndImagesFederated
+Instance: FindingImagingReportsStudiesAndImagesFederated
 InstanceOf: ExampleScenario
 Title:       "Finding Imaging Reports and Images - Federated (IHE)"
 Description: """

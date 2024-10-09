@@ -1,4 +1,4 @@
-Instance: FindingReportsAndImagesCentralRegistry
+Instance: FindingImagingReportsStudiesAndImagesCentralRegistry
 InstanceOf: ExampleScenario
 Title:      "Finding Imaging Reports and Images - Central Registry (NRL)"
 Description: """
