@@ -59,15 +59,16 @@ NHS Radiology faces significant challenges in enabling inter-organisational acce
 </figure>
 <br clear="all"/>
 
-#### Sequence Diagram
+#### Example Scenario
 
-<figure>
-{%include sequence-finding-image.svg%}
-<p id="fX.X.X.X-X" class="figureTitle">Sequence Diagram</p>
-</figure>
-<br clear="all">
+The National Imaging Registry will have two alphas. To an external user they will look very similar and both allow access to all imaging reports, studies and images across the English NHS. 
 
-See [NHS England Confluence - Imaging Workflow](https://nhsd-confluence.digital.nhs.uk/display/IOPS/Imaging+Workflow)
+- National Record Locator based:
+  - [Find Reports and Images (Central Registry)](ExampleScenario-FindingReportsAndImagesNRL.html) 
+  - NRL maintains a central index of Document Entries (also called pointers) and individual providers maintain this via [Update National Record Locator](ExampleScenario-UpdateNationalRecordLocator.html)
+- IHE XDS/MHD based solutions:
+  - [Find Reports and Images (Federated)](ExampleScenario-FindingReportsAndImagesIHE.html) unlike the NRL, this does not require a central repository as the queries are [federated/aggregated](https://www.enterpriseintegrationpatterns.com/patterns/conversation/Aggregator.html) out to providers. 
+
 
 ## Entity Model
 

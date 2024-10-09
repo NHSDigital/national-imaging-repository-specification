@@ -21,21 +21,21 @@ Usage: #definition
 
 * insert Instance_Empty(IHESearchDocumentEntries,  Binary,   "Query for Document Entries", [[ See [Finding and Retrieving Document Entries (IHE MHD)](CapabilityStatement-FindDocumentsMHD.html) for API base contract. E.g. `GET https://example.nhs.uk/FHIR/R4/DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&category=http://snomed.info/sct|721981007,http://snomed.info/sct|4201000179104` ]])
 
-* insert Instance_Empty(IHESearchResultsDocumentEntries,  Bundle,   "Return Search Results for Find Document Entries", [[ See [Finding and Retrieving Document Entries (IHE MHD)](CapabilityStatement-FindDocumentsMHD.html) for API base contract  ]])
+* insert Instance_Empty(IHESearchResultsDocumentEntries,  Bundle,   "Return Search Results for Find Document Entries", [[   ]])
 * insert InstanceVersion(1, "Search Results", MHDSearchResultsDocuments , )
 
 * insert Instance_Empty(XCAQuery, Binary,   "XCA Queries", [[ See [IHE Cross-Community Access (XCA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) ]])
-* insert Instance_Empty(XCAResponse, Binary,   "XCA Queries Responses", [[ See [IHE Cross-Community Access (XCA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html) ]])
+* insert Instance_Empty(XCAResponse, Binary,   "XCA Queries Responses", [[  ]])
 
 * insert Instance_Empty(IHEReadDiagnosticReport,  Binary,   "Read DiagnosticReport",    [[ See [Find and Retrieve Imaging Reports](CapabilityStatement-FindAndRetrieveImagingReports.html) for API overview. E.g. `GET https://example.nhs.uk/FHIR/R4//DiagnosticReport/ABCD` ]])
-* insert Instance_Empty(IHEViewDiagnosticReport,  DiagnosticReport,   "Return DiagnosticReport", [[ See [Find and Retrieve Imaging Reports](CapabilityStatement-FindAndRetrieveImagingReports.html) for API overview ]])
+* insert Instance_Empty(IHEViewDiagnosticReport,  DiagnosticReport,   "Return DiagnosticReport", [[  ]])
 * insert InstanceVersion(1, "Retrieve Diagnostic Report", DiagnosticReportImagingReportRCR , )
 
 * insert Instance_Empty(IHEReadImagingStudy,        Binary,   "Read ImagingStudy" ,             [[See [Retrieve Imaging Study](CapabilityStatement-RetrieveImagingStudy.html) for API overview ]])
-* insert Instance_Empty(IHERetrieveImagingStudy,    Binary,   "Return ImagingStudy",            [[DICOM KOS. See [Retrieve Imaging Study](CapabilityStatement-RetrieveImagingStudy.html) for API overview ]])
+* insert Instance_Empty(IHERetrieveImagingStudy,    Binary,   "Return ImagingStudy",            [[DICOM KOS  ]])
 
 * insert Instance_Empty(IHEReadImageInstance,       Binary,   "Read Image Instance",            [[See [Retrieve Image Instances](CapabilityStatement-RetrieveImageInstances.html) for API overview ]])
-* insert Instance_Empty(IHERetrieveImage,           Binary,  "Return Image Instance",           [[DICOM Image. See [Retrieve Image Instances](CapabilityStatement-RetrieveImageInstances.html) for API overview]])
+* insert Instance_Empty(IHERetrieveImage,           Binary,  "Return Image Instance",           [[DICOM Image Instance]])
 
 
 
