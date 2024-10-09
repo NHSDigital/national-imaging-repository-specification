@@ -73,4 +73,4 @@ See [NHS England Confluence - Imaging Workflow](https://nhsd-confluence.digital.
 
 - [Document Entry](StructureDefinition-DocumentEntry.html) data requirements for Document Metadata based on IHE Europe/UK documentation.
   - [NRL DocumentReference](StructureDefinition-NRL-DocumentReference.html) equivalent for National Record Locator. 
-- [Radiology DiagnosticReport](StructureDefinition-RadiologyDiagnosticReport.html) data requirement for Diagnostic Reports based on Royal College of Radiologists documentation.
+- [Radiology DiagnosticReport](StructureDefinition-ImagingReport.html) data requirement for Diagnostic Reports based on Royal College of Radiologists documentation.

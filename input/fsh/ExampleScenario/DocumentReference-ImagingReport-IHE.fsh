@@ -1,7 +1,7 @@
-Instance: DocumentReferenceRadiologyIHE
+Instance: DocumentReferenceImagingReportIHE
 InstanceOf: DocumentEntry
-Title: "DocumentReference IHE for Radiology"
-Description: "Document Reference NRL"
+Title: "DocumentReference IHE for a Imaging Report"
+Description: "DocumentReference IHE for a Imaging Report"
 Usage: #example
 
 
@@ -28,7 +28,7 @@ Usage: #example
 
 * content.attachment[+]
   * contentType = #application/fhir+json
-  * url = Canonical(DiagnosticReportRadiologyRCR)
+  * url = Canonical(DiagnosticReportImagingReportRCR)
   * creation = "2023-10-22T09:31:45+00:00"
   * language = urn:ietf:bcp:47#en-GB
 * content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:rad:TEXT "RAD TEXT"

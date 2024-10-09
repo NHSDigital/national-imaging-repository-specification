@@ -1,4 +1,4 @@
-Instance: DiagnosticReportRadiologyPlatforms
+Instance: DiagnosticReportImagingReportNRL
 InstanceOf: DiagnosticReport
 Title: "Radiology DiagnosticReport based on National Imaging Registry Alpha Specification"
 

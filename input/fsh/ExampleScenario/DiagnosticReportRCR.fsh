@@ -1,6 +1,6 @@
-Instance: DiagnosticReportRadiologyRCR
-InstanceOf: RadiologyDiagnosticReport
-Title: "Radiology DiagnosticReport based on Royal College of Radiologists HL7 v2 ORU converted to HL7 FHIR"
+Instance: DiagnosticReportImagingReportRCR
+InstanceOf: ImagingReport
+Title: "Imaging Report based on Royal College of Radiologists HL7 v2 ORU converted to HL7 FHIR"
 
 * meta.versionId = "1.0"
 

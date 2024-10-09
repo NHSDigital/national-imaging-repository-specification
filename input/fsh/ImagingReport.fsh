@@ -1,11 +1,11 @@
-Profile:        RadiologyDiagnosticReport
+Profile:        ImagingReport
 Parent:         http://hl7.org/fhir/StructureDefinition/DiagnosticReport
-Id:             RadiologyDiagnosticReport
-Title:          "Radiology Diagnostic Report"
+Id:             ImagingReport
+Title:          "Imaging Report (FHIR DiagnosticReport)"
 Description:    """
 DiagnosticReport based on
 
-- [Royal College of Radiologists - Understanding the Technical Options](https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf)
+- [Royal College of Radiologists - Understanding the Technical Options](https://www.rcr.ac.uk/media/wwtp2mif/rcr-publications_radiology-reporting-networks-understanding-the-technical-options_march-2022.pdf) HL7 v2 ORU
 - [UK Core DiagnosticReport](https://simplifier.net/hl7fhirukcorer4/ukcore-diagnosticreport)
 
 Users should also review this analysis in conjunction with [IHE Interactive Multimedia Report (IMR) - IMR DiagnosticReport](https://profiles.ihe.net/RAD/IMR/1.1.0/StructureDefinition-imr-diagnosticreport.html)

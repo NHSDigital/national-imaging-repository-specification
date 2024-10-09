@@ -1,13 +1,13 @@
-Instance: NHSE-CIC-8-MHD
+Instance: FindDocumentsMHD
 InstanceOf: CapabilityStatement
-Title: "Finding and Retrieving Document Entries"
+Title: "Finding and Retrieving Document Entries IHE ITI-67"
 Usage: #definition
 * description = """
 Finding and Retrieving Document Entries
 
-Based on[IHE Mobile access to Health Documents (MHD) - Find Document References ITI-67](https://profiles.ihe.net/ITI/MHD/ITI-67.html)
+This is [IHE Mobile access to Health Documents (MHD) - Find Document References ITI-67](https://profiles.ihe.net/ITI/MHD/ITI-67.html) linked to UK/NHS England specific Document Metadata
 """
-* name = "NHSE-CIC-8-MHD"
+* name = "FindDocumentsMHD"
 * title = "Finding and Retrieving Document Entries"
 * status = #draft
 * experimental = false
@@ -24,7 +24,34 @@ Based on[IHE Mobile access to Health Documents (MHD) - Find Document References 
 * insert Resource(#DocumentReference, DocumentEntry)
 * insert WithSupportedProfile(https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference)
 * rest.resource[=]
-  * documentation = "`GET /DocumentReference/{id}` \n\n `GET /DocumentReference?{parameters}` \n\nImplementers **SHALL** also conform to [UKCore-DocumentReference](https://simplifier.net/hl7fhirukcorer4/ukcore-documentreference) and conformance to all profiles **SHOULD** be tested via [FHIR Validation](https://hl7.org/fhir/R4/validation.html). "
+  * documentation = """
+
+    ### Read
+
+    `GET /DocumentReference/{id}`
+
+    #### Example
+
+    `GET /DocumentReference/1234`.
+
+    Example API response:
+
+    - [DocumentReference IHE for Radiology](DocumentReference-DocumentReferenceRadiologyIHE.html)
+
+    ### Search
+
+    `GET /DocumentReference?{parameters}`
+
+    #### Example
+
+    `GET /DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888`
+
+    Example response:
+    - [Document Reference Search Results MHD](Bundle-MHDSearchResultsDocuments.html)
+
+    Implementers **SHALL** also conform to [UKCore-DocumentReference](https://simplifier.net/hl7fhirukcorer4/ukcore-documentreference) and conformance to all profiles **SHOULD** be tested via [FHIR Validation](https://hl7.org/fhir/R4/validation.html).
+
+  """
 * insert Interaction(#read)
 * insert Interaction(#search-type)
 

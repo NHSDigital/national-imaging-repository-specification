@@ -1,6 +1,6 @@
-Instance: DocumentReferenceRadiologyNRL
+Instance: DocumentReferenceImagingReportNRL
 InstanceOf: DocumentReference
-Title: "DocumentReference NRL for Radiology"
+Title: "DocumentReference NRL for a Imaging Report"
 Description: "Document Reference IHE - can be in either IHE XDS Document Entry or IHE MHD DocumentReference format"
 Usage: #example
 

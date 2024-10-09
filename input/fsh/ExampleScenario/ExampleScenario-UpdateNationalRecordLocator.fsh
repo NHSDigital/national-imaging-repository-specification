@@ -25,7 +25,7 @@ Usage: #definition
 * insert InstanceVersion(1, "Bundle", NRLTransactionBundle,  )
 
 * insert Instance_Empty(NRLRegisterDocument, DocumentReference,  "Register Document Entry", [[  ]])
-* insert InstanceVersion(1, "DocumentReference", DocumentReferenceRadiologyIHE ,  )
+* insert InstanceVersion(1, "DocumentReference", DocumentReferenceImagingReportIHE ,  )
 
 * process[+]
   * title = "Store Document (XDS Provide and Register)"
@@ -44,7 +44,7 @@ Instance: ListExample
 InstanceOf: List
 * status = #current
 * mode = #working
-* entry[+].item.reference = Canonical(DocumentReferenceRadiologyIHE)
+* entry[+].item.reference = Canonical(DocumentReferenceImagingReportIHE)
 
 Instance: IHETransactionBundle
 InstanceOf: Bundle
@@ -54,7 +54,7 @@ IHE MHD [Provide Document Bundle [ITI-65]](https://profiles.ihe.net/ITI/MHD/4.2.
 """
 Usage: #example
 * insert TransactionBundle("2023-10-22T09:31:45+00:00")
-* insert AddTransactionEntry(DocumentReference, DocumentReferenceRadiologyIHE, "DocumentReference")
+* insert AddTransactionEntry(DocumentReference, DocumentReferenceImagingReportIHE, "DocumentReference")
 * insert AddTransactionEntry(List, ListExample,"List")
 
 
@@ -64,5 +64,5 @@ Title:       "NRL Version of the transaction Bundle"
 Description:  ""
 Usage: #example
 * insert TransactionBundle("2023-10-22T09:31:45+00:00")
-* insert AddTransactionEntry(DocumentReference, DocumentReferenceRadiologyNRL, "DocumentReference")
+* insert AddTransactionEntry(DocumentReference, DocumentReferenceImagingReportNRL, "DocumentReference")
 
