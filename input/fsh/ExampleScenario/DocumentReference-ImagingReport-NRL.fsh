@@ -1,5 +1,5 @@
 Instance: DocumentReferenceImagingReportNRL
-InstanceOf: DocumentReference
+InstanceOf: NRLDocumentReference
 Title: "DocumentReference NRL for a Imaging Report"
 Description: "Document Reference NRL"
 Usage: #example
