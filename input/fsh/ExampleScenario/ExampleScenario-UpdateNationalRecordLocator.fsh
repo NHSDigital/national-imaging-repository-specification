@@ -36,7 +36,7 @@ Usage: #definition
 */
 * process[+]
   * title = "Document Entry Event Feed"
-  * insert ProcessCreateEvent(1, "IHE DSUBm Resource Notify",  docRecipient, translation, IHETransactionFeed, ,         [[  ]])
+  * insert ProcessCreateEvent(1, "Event Feed e.g. IHE DSUBm Resource Notify",  docRecipient, translation, IHETransactionFeed, ,         [[  ]])
 * process[+]
   * title = "Update NRL"
   * insert ProcessCreate(1, "NRL Transaction Feed",  translation, nrl, NRLTransactionFeed, ,         [[  ]])
@@ -51,11 +51,11 @@ Instance: IHETransactionBundle
 InstanceOf: Bundle
 Title:       "IHE MHD Provide Document Bundle Example"
 Description:  """
-IHE MHD [Provide Document Bundle [ITI-65]](https://profiles.ihe.net/ITI/MHD/4.2.1/ITI-65.html) [minimal metadata](https://profiles.ihe.net/ITI/MHD/4.2.1/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html) option
+IHE MHD [Provide Document Bundle [ITI-65]](https://profiles.ihe.net/ITI/MHD/4.2.1/ITI-65.html) [minimal metadata](https://profiles.ihe.net/ITI/MHD/4.2.1/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html) option.
 """
 Usage: #example
 * insert TransactionBundle("2023-10-22T09:31:45+00:00")
-* insert AddTransactionEntry(DocumentReference, DocumentReferenceImagingReportIHE, "DocumentReference")
+* insert AddTransactionEntry(DocumentReference, DocumentReferenceImagingStudyMinimalMetadata, "DocumentReference")
 * insert AddTransactionEntry(List, ListExample,"List")
 
 
