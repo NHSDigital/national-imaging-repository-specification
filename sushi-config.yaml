@@ -78,22 +78,6 @@ pages:
     title: Imaging
     generation: markdown
 
-groups:
-  -ihe:
-    name: "IHE XDS/MHD"
-    description: "Examples for IHE XDS/MHD"
-    resources:
-      - DocumentReference/DocumentReferenceImagingReportIHE
-      - DocumentReference/DocumentReferenceImagingStudyIHE
-      - DocumentReference/DocumentReferenceImagingStudyMinimalMetadata
-      - DiagnosticReport/DiagnosticReportImagingReportRCR
-  -nrl:
-    name: "National Record Locator"
-    description: "Examples National Record Locator Context"
-    resources:
-      - DocumentReference/DocumentReferenceImagingReportNRL
-      - DocumentReference/DocumentReferenceImagingStudyNRL
-      - DiagnosticReport/DiagnosticReportImagingReportNRL
 
 menu:
   Home: index.html
