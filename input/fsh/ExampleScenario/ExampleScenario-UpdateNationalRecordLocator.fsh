@@ -16,7 +16,7 @@ Usage: #definition
 * insert ActorEntity(nrl,  "Document Registry - NHS England NRL",         [[NHS England National Record Locator]])
 
 
-* insert Instance_Empty(IHEStoreDocument, Bundle,   "IHE MHD ITI-65", [[ [IHE MHD - Provide Document Bundle [ITI-65] minimal document metadata](https://profiles.ihe.net/ITI/MHD/ITI-65.html)  ]])
+* insert Instance_Empty(IHEStoreDocument, Bundle,   "IHE MHD ITI-65 minimal document metadata", [[ [IHE MHD - Provide Document Bundle [ITI-65] minimal document metadata](https://profiles.ihe.net/ITI/MHD/ITI-65.html)  ]])
 * insert InstanceVersion(1, "Bundle", IHETransactionBundle,  )
 
 * insert Instance_Empty(IHETransactionFeed, Bundle, "Event Feed", [[ Feed type is not specified, this is for illustration purposes. ITI-65 contains the actual document, so [IHE DSUBm - Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or  [IHE Document Metadata Subscription (DSUB)](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) may be more suitable. ]])
