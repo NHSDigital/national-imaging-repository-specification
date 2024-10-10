@@ -58,6 +58,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludejsn: 'false'
   excludettl: 'true'
   excludemap: 'true'
+  excludeexample: 'false'
+  generate:
+    - xml
+    - json
 
 
 #resources:
