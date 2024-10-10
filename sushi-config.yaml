@@ -91,7 +91,7 @@ groups:
       - DocumentReference/DocumentReferenceImagingStudyMinimalMetadata
       - DiagnosticReport/DiagnosticReportImagingReportRCR
   -nrl:
-    name: "National Record Locator"
+    name: "National Record Locator Context Examples"
     resources:
       - DocumentReference/DocumentReferenceImagingReportNRL
       - DocumentReference/DocumentReferenceImagingStudyNRL
