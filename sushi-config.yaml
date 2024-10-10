@@ -81,3 +81,18 @@ menu:
   Home: index.html
   Use Case: usecase-imaging.html
   Artefacts: artifacts.html
+
+groups:
+  -ihe:
+    name: "IHE Context Examples"
+    resources:
+      - DocumentReference/DocumentReferenceImagingReportIHE
+      - DocumentReference/DocumentReferenceImagingStudyIHE
+      - DocumentReference/DocumentReferenceImagingStudyMinimalMetadata
+      - DiagnosticReport/DiagnosticReportImagingReportRCR
+  -nrl:
+    name: "National Record Locator"
+    resources:
+      - DocumentReference/DocumentReferenceImagingReportNRL
+      - DocumentReference/DocumentReferenceImagingStudyNRL
+      - DiagnosticReport/DiagnosticReportImagingReportNRL
