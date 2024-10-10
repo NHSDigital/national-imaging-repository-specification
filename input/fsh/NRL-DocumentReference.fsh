@@ -29,7 +29,7 @@ This is based on [National Record Locator - FHIR API v3 - Producer - Create new,
 * type 1..1
 * type.coding 1..1
 * type.coding.system 1..1
-* type.coding.system = "http://snomed.info/sct"
+//* type.coding.system = "http://snomed.info/sct"
 * type.coding.code  1..1
 
 * content.format 1..1

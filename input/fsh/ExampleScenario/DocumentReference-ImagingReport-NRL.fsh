@@ -13,6 +13,7 @@ Usage: #example
 
 * category.coding[+] = $sct#4201000179104 "Imaging report"
 
+
 * subject.identifier
   * system = "https://fhir.nhs.uk/Id/nhs-number"
   * value = "9912003888"

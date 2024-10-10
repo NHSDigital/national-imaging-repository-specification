@@ -12,7 +12,7 @@ Usage: #example
   * type.text = "Accession-Number"
 
 * category.coding[+] = $sct#721981007 "Diagnostic studies report"
-
+* type.coding = $sct#418062002 "MRA upper limb artery"
 * subject.identifier
   * system = "https://fhir.nhs.uk/Id/nhs-number"
   * value = "9912003888"
