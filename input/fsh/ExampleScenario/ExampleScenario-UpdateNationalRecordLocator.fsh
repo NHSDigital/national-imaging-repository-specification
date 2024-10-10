@@ -18,7 +18,7 @@ Usage: #definition
 * insert Instance_Empty(IHEStoreDocument, Bundle,   "IHE MHD ITI-65 minimal document metadata", [[ [IHE MHD - Provide Document Bundle [ITI-65] minimal document metadata](https://profiles.ihe.net/ITI/MHD/ITI-65.html)  ]])
 * insert InstanceVersion(1, "Bundle", IHETransactionBundle,  )
 
-* insert Instance_Empty(IHETransactionFeed, Bundle, "Event Feed", [[ Feed type is not specified, this is for illustration purposes. ITI-65 contains the actual document, so [IHE DSUBm - Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or  [IHE Document Metadata Subscription (DSUB)](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) may be more suitable. ]])
+* insert Instance_Empty(IHETransactionFeed, Bundle, "Event Feed", [[ Feed type is not specified, this is for illustration purposes. ITI-65 generally contains the actual documents, so [IHE DSUBm - Resource Notify [ITI-112]](https://profiles.ihe.net/ITI/DSUBm/ITI-112.html) or  [IHE Document Metadata Subscription (DSUB)](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) may be more suitable. ]])
 
 * insert Instance_Empty(NRLTransactionFeed, Bundle,   "NRL version of IHE ITI-65", [[ This is a [FHIR Transaction](https://hl7.org/fhir/R4/http.html#transaction) version of [NRL FHIR API - Create document pointers with a specific id](https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir/v3/producer#put-/DocumentReference). It has been designed with ITI-65 minimal metadata compatability in mind, but does not containing a List/SubmissionSet, a document (Binary) and neither an embedded document in the DocumentReference.  ]])
 * insert InstanceVersion(1, "Bundle", NRLTransactionBundle,  )
