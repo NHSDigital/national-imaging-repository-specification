@@ -62,7 +62,7 @@ Usage: #example
 Instance: NRLTransactionBundle
 InstanceOf: Bundle
 Title:       "NRL Version of the transaction Bundle"
-Description:  ""
+Description:  "TODO"
 Usage: #example
 * insert TransactionBundle("2023-10-22T09:31:45+00:00")
 * insert AddTransactionEntry(DocumentReference, DocumentReferenceImagingReportNRL, "DocumentReference")

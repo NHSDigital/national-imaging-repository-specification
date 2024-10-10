@@ -77,22 +77,27 @@ pages:
   usecase-imaging.md:
     title: Imaging
     generation: markdown
-menu:
-  Home: index.html
-  Use Case: usecase-imaging.html
-  Artefacts: artifacts.html
 
 groups:
   -ihe:
-    name: "IHE Context Examples"
+    name: "IHE XDS/MHD"
+    description: "Examples for IHE XDS/MHD"
     resources:
       - DocumentReference/DocumentReferenceImagingReportIHE
       - DocumentReference/DocumentReferenceImagingStudyIHE
       - DocumentReference/DocumentReferenceImagingStudyMinimalMetadata
       - DiagnosticReport/DiagnosticReportImagingReportRCR
   -nrl:
-    name: "National Record Locator Context Examples"
+    name: "National Record Locator"
+    description: "Examples National Record Locator Context"
     resources:
       - DocumentReference/DocumentReferenceImagingReportNRL
       - DocumentReference/DocumentReferenceImagingStudyNRL
       - DiagnosticReport/DiagnosticReportImagingReportNRL
+
+menu:
+  Home: index.html
+  Use Case: usecase-imaging.html
+  Artefacts: artifacts.html
+
+
