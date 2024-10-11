@@ -43,19 +43,31 @@ Usage: #definition
       * title = "Retrieve selected image (optional)"
       * insert ProcessRead(1, "Retrieve Image", user, image, NRLRetrieveImage, NRLRetrieveImageResult , [[  ]])
 
+
+
 Instance: NRLSearchResultsDocuments
 InstanceOf: Bundle
 Title:   "Bundle - Document Reference Search Results NRL"
+Description: """
+Example search results for patient with a NHS Number: 9912003888
 
+`GET https://example.nhs.uk/FHIR/R4/DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888`
+"""
 Usage: #example
 * insert SearchBundle(1, [[https://example.nhs.uk/FHIR/R4/DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888]])
 * insert EntryMatch(DocumentReference, DocumentReferenceImagingReportNRL)
 * insert EntryMatch(DocumentReference, DocumentReferenceImagingStudyNRL)
 
+
+
 Instance: NRLSearchDiagnosticReports
 InstanceOf: Bundle
 Title:   "Bundle - DiagnosticReport Search Results NRL"
+Description: """
+Example search results for Imaging Report with an id of ABCD
 
+`GET https://example.nhs.uk/FHIR/R4/DiagnosticReport?_id=ABCD`
+"""
 Usage: #example
 * insert SearchBundle(1, [[https://example.nhs.uk/FHIR/R4/DiagnosticReport?_id=ABCD]])
 * insert EntryMatch(DiagnosticReport, DiagnosticReportImagingReportNRL)

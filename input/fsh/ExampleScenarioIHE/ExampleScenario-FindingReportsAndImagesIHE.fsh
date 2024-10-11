@@ -63,7 +63,11 @@ Usage: #definition
 Instance: MHDSearchResultsDocuments
 InstanceOf: Bundle
 Title:       "Bundle - Document Reference Search Results MHD"
+Description: """
+Example search results for patient with a NHS Number: 9912003888 who has Diagnostic studies reports and Imaging report
 
+`GET https://example.nhs.uk/FHIR/R4/DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&category=http://snomed.info/sct|721981007,http://snomed.info/sct|4201000179104`
+"""
 Usage: #example
 * insert SearchBundle(1, [[https://example.nhs.uk/FHIR/R4/DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&category=http://snomed.info/sct|721981007,http://snomed.info/sct|4201000179104]])
 * insert EntryMatch(DocumentReference, DocumentReferenceImagingReportIHE)

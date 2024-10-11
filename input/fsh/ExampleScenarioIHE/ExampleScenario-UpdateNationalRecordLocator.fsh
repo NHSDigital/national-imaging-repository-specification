@@ -51,7 +51,9 @@ Instance: IHETransactionBundle
 InstanceOf: Bundle
 Title:       "IHE MHD Provide Document Bundle Example"
 Description:  """
-IHE MHD [Provide Document Bundle [ITI-65]](https://profiles.ihe.net/ITI/MHD/4.2.1/ITI-65.html) [minimal metadata](https://profiles.ihe.net/ITI/MHD/4.2.1/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html) option.
+Example of IHE MHD [Provide Document Bundle [ITI-65]](https://profiles.ihe.net/ITI/MHD/4.2.1/ITI-65.html) [minimal metadata](https://profiles.ihe.net/ITI/MHD/4.2.1/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html).
+This is a FHIR Transaction Bundle containing a DocumentReference for an Imaging Report with an embedded document and a Document SubmissionSet (FHIR List)
+`POST https://example.nhs.uk/FHIR/R4/`
 """
 Usage: #example
 * insert TransactionBundle("2023-10-22T09:31:45+00:00")
@@ -62,7 +64,11 @@ Usage: #example
 Instance: NRLTransactionBundle
 InstanceOf: Bundle
 Title:       "NRL Version of the transaction Bundle"
-Description:  "TODO"
+Description: """
+Example sending of a FHIR Transaction Bundle containing a DocumentReference for an Imaging Report
+
+`POST https://example.nhs.uk/FHIR/R4/`
+"""
 Usage: #example
 * insert TransactionBundle("2023-10-22T09:31:45+00:00")
 * insert AddTransactionEntry(DocumentReference, DocumentReferenceImagingReportNRL, "DocumentReference")
