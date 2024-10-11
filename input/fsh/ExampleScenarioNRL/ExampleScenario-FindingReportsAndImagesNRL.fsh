@@ -9,10 +9,10 @@ Usage: #definition
 * status = #draft
 * name = "FindingImagingReportsStudiesAndImagesCentralRegistry"
 
-* insert ActorEntity(user,  "Document Consumer",         [[The Document Consumer Actor queries for documents meeting certain criteria, and may retrieve selected documents.]])
-* insert ActorEntity(xds,  "Document Registry", [[The Document Registry Actor maintains metadata about each registered document in a document entry. This includes a link to the Document in the Repository where it is stored. The Document Registry responds to queries from Document Consumer actors about documents meeting specific criteria.]])
-* insert ActorEntity(docs,  "Document Repository",         [[The Document Repository is responsible for both the persistent storage of these documents (e.g. Imaging Report)]])
-* insert ActorEntity(image,  "Imaging Repository",         [[The Imaging Repository is responsible for both the persistent storage of DICOM Images and Imaging Studies, these may also contain Imaging Reports. This is also known as a PACS.]])
+* insert ActorEntity(user,  "Document Consumer",   [[The [Document Consumer](ActorDefinition-DocumentConsumer.html) Actor queries for documents meeting certain criteria, and may retrieve selected documents.]])
+* insert ActorEntity(xds,  "Document Registry", [[The [Document Registry](ActorDefinition-DocumentRegistry.html) Actor maintains metadata about each registered document in a document entry. This includes a link to the Document in the Repository where it is stored. The Document Registry responds to queries from Document Consumer actors about documents meeting specific criteria.]])
+* insert ActorEntity(docs,  "Document Repository",   [[The [Document Repository](ActorDefinition-DocumentRepository.html) is responsible for both the persistent storage of these documents (e.g. Imaging Report)]])
+* insert ActorEntity(image,  "Imaging Repository",   [[The [Imaging Repository](ActorDefinition-ImagingRepository.html) is responsible for both the persistent storage of DICOM Images and Imaging Studies, these may also contain Imaging Reports. This is also known as a PACS.]])
 
 * insert Instance_Empty(NRLSearchDocumentEntries,  Binary,   "Query for Document Entries", [[ See [Finding and Retrieving Document Entries (NRL)](CapabilityStatement-FindDocumentsNRL.html) for API base contract. E.g. `GET https://example.nhs.uk/FHIR/R4/DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number` ]])
 * insert Instance_Empty(NRLReturnDocumentEntries,  Bundle,   "Search Results for Query for Document Entries", [[  ]])
