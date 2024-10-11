@@ -32,6 +32,8 @@ Usage: #example
   * url = "https://a-pacs-system.org.nhs.uk/some-path/wado-rs/studies/7a530b22-688e-4623-876f-48d0037007ba/metadata"
   * creation = "2023-10-22T09:31:45+00:00"
   * language = urn:ietf:bcp:47#en-GB
+  * data.id = "IS THIS CORRECT. HAVE TRIED JUST data"
+
 * content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:rad "Radiology Domain"
 
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#U
