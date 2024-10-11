@@ -1,5 +1,5 @@
 Profile:        ImagingStudy
-Parent:         https://profiles.ihe.net/RAD/IMR/StructureDefinition/imr-imagingstudy
+Parent:         http://hl7.org/fhir/StructureDefinition/ImagingStudy
 Id:             ImagingStudy
 Title:          "Imaging Study"
 Description:    "Ignore, just a collection of notes."

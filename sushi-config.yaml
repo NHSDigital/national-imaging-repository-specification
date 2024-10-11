@@ -78,6 +78,22 @@ pages:
     title: Imaging
     generation: markdown
 
+groups:
+  -ex-scenario-IHE:
+    name: "Example: IHE Radiology Context"
+    description: "Examples associated with [IHE Radiology](https://www.ihe.net/ihe_domains/radiology/) to support National Imaging Registry"
+    resources:
+      - DocumentReference/DocumentReferenceImagingReportIHE
+      - DocumentReference/DocumentReferenceImagingStudyIHE
+      - DocumentReference/DocumentReferenceImagingStudyMinimalMetadata
+      - DiagnosticReport/DiagnosticReportImagingReportRCR
+  -ex-scenario-NRL:
+    name: "Example: NIR/NRL Context"
+    description: "Examples associated with the extension of National Record Locator to support National Imaging Registry"
+    resources:
+      - DocumentReference/DocumentReferenceImagingReportNRL
+      - DocumentReference/DocumentReferenceImagingStudyNRL
+      - DiagnosticReport/DiagnosticReportImagingReportNRL
 
 menu:
   Home: index.html

@@ -3,6 +3,9 @@ Parent:         https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Min
 Id:             DocumentReferenceMinimalDocumentMetadata
 Title:          "DocumentReference Minimal Document Metadata"
 Description:    """
+
+See [IHE MHD Minimal DocumentReference](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference)
+
 Documentation only at present - is not currently required in the project.
  """
 
