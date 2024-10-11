@@ -8,7 +8,7 @@ This is a capture of requirements coming from this project.
 The actual API is:
 
 - [DICOM Retrieve (WADO-RS)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri)
-- [IHE Retrieve (WADO-RS)](https://wiki.ihe.net/index.php/Web-based_Image_Access)
+- [IHE WADO Retrieve (WADO-RS)](https://wiki.ihe.net/index.php/Web-based_Image_Access)
 - [IHE Radiology (RAD) Technical Framework](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf)
 
 """
