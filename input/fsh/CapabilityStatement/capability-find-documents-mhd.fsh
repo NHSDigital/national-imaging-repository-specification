@@ -28,11 +28,15 @@ This is [IHE Mobile access to Health Documents (MHD) - Find Document References 
 
     ### Read
 
-    `GET /DocumentReference/{id}`
+    ```
+    GET /DocumentReference/{id}
+    ```
 
     #### Example
 
-    `GET /DocumentReference/1234`.
+    ```
+    GET /DocumentReference/1234
+    ```
 
     Example API response:
 
@@ -40,11 +44,15 @@ This is [IHE Mobile access to Health Documents (MHD) - Find Document References 
 
     ### Search
 
-    `GET /DocumentReference?{parameters}`
+    ```
+    GET /DocumentReference?{parameters}
+    ```
 
     #### Example
 
-    `GET /DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&category=http://snomed.info/sct|721981007,http://snomed.info/sct|4201000179104`
+    ```
+    GET /DocumentReference?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&category=http://snomed.info/sct|721981007,http://snomed.info/sct|4201000179104
+    ```
 
     Example response:
     - [Document Reference Search Results MHD](Bundle-MHDSearchResultsDocuments.html)

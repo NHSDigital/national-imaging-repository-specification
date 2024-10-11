@@ -14,11 +14,11 @@ Usage: #definition
 * insert ActorEntity(docs,  "Document Repository",   [[The [Document Repository](ActorDefinition-DocumentRepository.html) is responsible for both the persistent storage of these documents (e.g. Imaging Report)]])
 * insert ActorEntity(image,  "Imaging Repository",   [[The [Imaging Repository](ActorDefinition-ImagingRepository.html) is responsible for both the persistent storage of DICOM Images and Imaging Studies, these may also contain Imaging Reports. This is also known as a PACS.]])
 
-* insert Instance_Empty(NRLSearchDocumentEntries,  Binary,   "Query for Document Entries", [[ See [Finding and Retrieving Document Entries (NRL)](CapabilityStatement-FindDocumentsNRL.html) for API base contract. E.g. `GET https://example.nhs.uk/FHIR/R4/DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number` ]])
+* insert Instance_Empty(NRLSearchDocumentEntries,  Binary,   "Query for Document Entries", [[ See [Finding and Retrieving Document Entries (NRL)](CapabilityStatement-FindDocumentsNRL.html) for API base contract. E.g. \n```\nGET https://example.nhs.uk/FHIR/R4/DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number\n```\n ]])
 * insert Instance_Empty(NRLReturnDocumentEntries,  Bundle,   "Search Results for Query for Document Entries", [[  ]])
 * insert InstanceVersion(1, "Search Results NRL", NRLSearchResultsDocuments , )
 
-* insert Instance_Empty(NRLSearchDiagnosticReports,  Binary,   "Query for DiagnosticReport", [[ See [Find and Retrieve Imaging Reports](CapabilityStatement-FindAndRetrieveImagingReports.html) for API base contract. E.g. `GET https://example.nhs.uk/FHIR/R4/DiagnosticReport?_id=ABCD` ]])
+* insert Instance_Empty(NRLSearchDiagnosticReports,  Binary,   "Query for DiagnosticReport", [[ See [Find and Retrieve Imaging Reports](CapabilityStatement-FindAndRetrieveImagingReports.html) for API base contract. E.g. \n```\nGET https://example.nhs.uk/FHIR/R4/DiagnosticReport?_id=ABCD\n```\n ]])
 * insert Instance_Empty(NRLReturnDiagnosticReports,  Bundle,   "Return matching DiagnosticReport entries", [[  ]])
 * insert InstanceVersion(1, "Search Diagnostic Report by _id ", NRLSearchDiagnosticReports , )
 

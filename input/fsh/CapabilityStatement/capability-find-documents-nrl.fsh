@@ -31,11 +31,15 @@ for documentation purposes.
   * documentation = """
   ### Read
 
-  `GET /DocumentReference/{id}`
+  ```
+  GET /DocumentReference/{id}
+  ```
 
   #### Example
 
-  `GET /DocumentReference/5678`.
+  ```
+  GET /DocumentReference/5678
+  ```
 
   Example API response:
 
@@ -43,11 +47,15 @@ for documentation purposes.
 
   ### Search
 
-  `GET /DocumentReference?{parameters}`
+  ```
+  GET /DocumentReference?{parameters}
+  ```
 
   #### Example
 
-  `GET /DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888`
+  ```
+  GET /DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888
+  ```
 
   Example response:
   - [Document Reference Search Results NRL](Bundle-NRLSearchResultsDocuments.html)

@@ -27,11 +27,15 @@ Although this is classed here as a [Document Repository](ActorDefinition-Documen
   * documentation = """
    ### Read
 
-  `GET /DiagnosticReport/{id}`
+  ```
+  GET /DiagnosticReport/{id}
+  ```
 
   #### Example
 
-  `GET /DiagnosticReport/ABCD`.
+  ```
+  GET /DiagnosticReport/ABCD
+  ```
 
   Example API response:
   - [Imaging Report - Royal College of Radiologist](DiagnosticReport-DiagnosticReportRadiologyRCR.html)
@@ -39,11 +43,15 @@ Although this is classed here as a [Document Repository](ActorDefinition-Documen
 
   ### Search
 
-  `GET /DiagnosticReport?{parameters}`
+  ```
+  GET /DiagnosticReport?{parameters}
+  ```
 
   #### Example
 
-  `GET /DiagnosticReport?_id=ABCD`
+  ```
+  GET /DiagnosticReport?_id=ABCD
+  ```
 
   Example response:
   - [Document Reference Search Results NRL](Bundle-NRLSearchDiagnosticReports.html)

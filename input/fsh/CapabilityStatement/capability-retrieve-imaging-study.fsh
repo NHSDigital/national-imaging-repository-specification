@@ -32,7 +32,9 @@ The actual API is:
    ### Read
    This use of the FHIR Binary resource is not intended here and this is only for documentation purposes.
 
-  `GET /{url}`
+  ```
+  GET /{url}
+  ```
 
   #### Example
 
