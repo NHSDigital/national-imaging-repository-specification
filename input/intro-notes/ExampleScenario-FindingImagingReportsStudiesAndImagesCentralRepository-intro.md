@@ -3,3 +3,7 @@
 <p id="fX.X.X.X-X" class="figureTitle">Process Diagram</p>
 </figure>
 <br clear="all"/>
+
+Links:
+
+- [Aggregator](https://www.enterpriseintegrationpatterns.com/patterns/conversation/Aggregator.html) pattern.

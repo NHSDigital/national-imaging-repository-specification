@@ -44,16 +44,16 @@
             </rim:Slot>
             <rim:Slot name="sourcePatientId">
                 <rim:ValueList>
-                    <rim:Value>jd12323^^^wsh</rim:Value>
+                    <rim:Value>9912003888^^^NHS^NH</rim:Value>
                 </rim:ValueList>
             </rim:Slot>
             <rim:Slot name="sourcePatientInfo">
                 <rim:ValueList>
-                    <rim:Value>PID-3|pid1^^^domain</rim:Value>
+                    <rim:Value>PID-3|A123435^^^^MR^RR8</rim:Value>
                     <rim:Value>PID-5|Doe^John^^^</rim:Value>
                     <rim:Value>PID-7|19560527</rim:Value>
                     <rim:Value>PID-8|M</rim:Value>
-                    <rim:Value>PID-11|100 Main St^^Metropolis^Il^44130^USA</rim:Value>
+                    <rim:Value>PID-11|Some St^^Leeds^West Riding^44130^UK</rim:Value>
                 </rim:ValueList>
             </rim:Slot>
             <rim:Name>

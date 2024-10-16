@@ -18,6 +18,8 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 * context.facilityType from FacilityType
 * context.practiceSetting from Specialty
 
+* context.sourcePatientInfo.identifier only MedicalRecordNumber
+
 * context.related 1..*
 
 * context.related ^slicing.discriminator.type = #pattern

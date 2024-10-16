@@ -16,11 +16,12 @@ Usage: #example
 * masterIdentifier.value = "f3f7920b-3b91-4e3e-afdc-8791e2095fbe"
 
 * category.coding[+] = $sct#721981007 "Diagnostic studies report"
-* category.coding[+] = $sct#113091000 "Magnetic resonance imaging (procedure)"
+//* category.coding[+] = $sct#113091000 "Magnetic resonance imaging (procedure)"
 
 * subject.identifier
   * system = "https://fhir.nhs.uk/Id/nhs-number"
   * value = "9912003888"
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#NH
 * subject.display = "Richard SMITH"
 
 * custodian.identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
@@ -42,6 +43,10 @@ Usage: #example
 
 * context.sourcePatientInfo.identifier.system = "https://fhir.leedsth.nhs.uk/Id/MRN"
 * context.sourcePatientInfo.identifier.value = "A123435"
+* context.sourcePatientInfo.identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
+* context.sourcePatientInfo.identifier.assigner.identifier.system = "https://fhir.nhs.uk/Id/ods-organization-code"
+* context.sourcePatientInfo.identifier.assigner.identifier.value = "RR8"
+
 * context.related[accessionNumber]
   * type = "ServiceRequest"
   * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN

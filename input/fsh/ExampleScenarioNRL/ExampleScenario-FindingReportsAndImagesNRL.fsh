@@ -14,23 +14,23 @@ Usage: #definition
 * insert ActorEntity(docs,  "Document Repository",   [[The [Document Repository](ActorDefinition-DocumentRepository.html) is responsible for both the persistent storage of these documents (e.g. Imaging Report)]])
 * insert ActorEntity(image,  "Imaging Repository",   [[The [Imaging Repository](ActorDefinition-ImagingRepository.html) is responsible for both the persistent storage of DICOM Images and Imaging Studies, these may also contain Imaging Reports. This is also known as a PACS.]])
 
-* insert Instance_Empty(NRLSearchDocumentEntries,  Binary,   "Query for Document Entries", [[ See [Finding and Retrieving Document Entries (NRL)](CapabilityStatement-FindDocumentsNRL.html) for API base contract. E.g. \n```\nGET https://example.nhs.uk/FHIR/R4/DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number\n```\n ]])
-* insert Instance_Empty(NRLReturnDocumentEntries,  Bundle,   "Search Results for Query for Document Entries", [[  ]])
+* insert Instance_Empty(NRLSearchDocumentEntries,  Binary,   "Query for Document Entries", [[ See [Finding and Retrieving Document Entries (NRL)](CapabilityStatement-FindDocumentsNRL.html) for API base contract. E.g. \n```\nGET https://example.nhs.uk/FHIR/R4/DocumentReference?subject:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888\n```\n ]])
+* insert Instance_Empty(NRLReturnDocumentEntries,  Bundle,   "Return Document Entry results", [[  ]])
 * insert InstanceVersion(1, "Search Results NRL", NRLSearchResultsDocuments , )
 
 * insert Instance_Empty(NRLSearchDiagnosticReports,  Binary,   "Query for DiagnosticReport", [[ See [Find and Retrieve Imaging Reports](CapabilityStatement-FindAndRetrieveImagingReports.html) for API base contract. E.g. \n```\nGET https://example.nhs.uk/FHIR/R4/DiagnosticReport?_id=ABCD\n```\n ]])
-* insert Instance_Empty(NRLReturnDiagnosticReports,  Bundle,   "Return matching DiagnosticReport entries", [[  ]])
+* insert Instance_Empty(NRLReturnDiagnosticReports,  Bundle,   "Return DiagnosticReport results", [[  ]])
 * insert InstanceVersion(1, "Search Diagnostic Report by _id ", NRLSearchDiagnosticReports , )
 
 * insert Instance_Empty(NRLRetrieveImagingStudy,        Binary,   "Read ImagingStudy" ,             [[See [Retrieve Imaging Study](CapabilityStatement-RetrieveImagingStudy.html) for API overview ]])
-* insert Instance_Empty(NRLRetrieveImagingStudyResult,  Binary,   "Retrieve Imaging Study", [[ DICOM KOS ]])
+* insert Instance_Empty(NRLRetrieveImagingStudyResult,  Binary,   "Return Imaging Study", [[ DICOM KOS ]])
 
 * insert Instance_Empty(NRLRetrieveImage,       Binary,   "Read Image Instance",            [[See [Retrieve Image Instances](CapabilityStatement-RetrieveImageInstances.html) for API overview ]])
-* insert Instance_Empty(NRLRetrieveImageResult,  Binary,   "Retrieve Image", [[ DICOM Image Instance ]])
+* insert Instance_Empty(NRLRetrieveImageResult,  Binary,   "Return Image", [[ DICOM Image Instance ]])
 
 
 * process[+]
-  * title = "Find imaging studies and reports"
+  * title = "Query patient image and/or report"
   * insert ProcessSearch(1, "Search for Documents", user, xds, NRLSearchDocumentEntries , NRLReturnDocumentEntries, [[ ]])
 * process[+]
   * title = "Option - Retrieve selected imaging report"
