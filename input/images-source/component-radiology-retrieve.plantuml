@@ -1,27 +1,22 @@
 @startuml
 
-
-
 actor DocumentConsumer
 
+component "Document Registry" as DocumentRegistry
+component "Document Repository" as DocumentRepository
+component "Image Repository" as ImageRepository
 
+interface "Query for patient image and/or report" as IC
+interface "Retrieve selected imaging report" as IC2
+interface "Retrieve selected imaging study (and image instances)" as IC3
 
-
-
-component DocumentRegistry
-component DocumentRepository
-component ImageRepository
-
-interface "Interface Contract [[CapabilityStatement-NHSE-CIC-8-MHD.html IHE MHD ITI-67]]/XDS\nAPI Specification NRL" as IC
-interface "Interface Contract [[https://profiles.ihe.net/ITI/MHD/ITI-68.html IHE MHD ITI-68]]/XDS and NRL" as IC2
-interface "Interface Contract IHE ??? and NRL" as IC3
-
-DocumentConsumer --> IC : Query for Image Studies and Reports
+DocumentConsumer --> IC
 IC --> DocumentRegistry
-DocumentConsumer --> IC2  : Retrieve Image Report
-IC2 --> DocumentRepository
-DocumentConsumer --> IC3 : Retrieve Image Study or Image
-IC3 --> ImageRepository
 
+DocumentConsumer --> IC2
+IC2 --> DocumentRepository
+
+DocumentConsumer --> IC3
+IC3 --> ImageRepository
 
 @enduml
