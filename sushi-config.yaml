@@ -6,7 +6,7 @@ id: nhs.england.rad
 canonical: https://fhir.nhs.uk/England/RAD
 version: 0.0.1-current
 name: NIR_England_National_Imaging_Registry
-title: "NHS England Radiology (Sandbox)"
+title: "Radiology (Sandbox)"
 description: put the short description of the profile here. it should explain what problem is being solved
 releaseLabel: ci-build
 
