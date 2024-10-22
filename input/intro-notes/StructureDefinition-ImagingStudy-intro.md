@@ -1,6 +1,6 @@
-## Entity Model
+## Entity Mapping
 
-See [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf)
+Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf)
 
 ### Overview
 
