@@ -21,5 +21,5 @@ Description:    "Ignore, just a collection of notes."
 * subject only Reference(Patient)
 * subject.identifier only NHSNumber
 
-* procedureCode from ImagingCodeNICIP (preferred)
+* procedureCode from ImagingCodeNICIP
 
