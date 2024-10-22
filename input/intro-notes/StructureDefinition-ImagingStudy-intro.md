@@ -2,7 +2,7 @@
 ## Entity Model
 
 <figure>
-{%include component-imaging-study.svg%}
+{%include datamodel-imaging-study.svg%}
 <p id="fX.X.X.X-X" class="figureTitle">Entity Diagnostic Report</p>
 </figure>
 <br clear="all">
