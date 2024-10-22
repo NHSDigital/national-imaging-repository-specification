@@ -12,10 +12,9 @@ Description:    "Ignore, just a collection of notes."
 * identifier ^slicing.description = "Slice based on the type"
 * identifier ^slicing.ordered = false
 * identifier contains
-  accessionNumber 0..1 MS
+  accessionNumber 1..1 MS
 
-* identifier[accessionNumber].identifier 1..1
-* identifier[accessionNumber].identifier only AccessionNumber
+* identifier[accessionNumber] only AccessionNumber
 
 * subject 1..1
 * subject.identifier 1..1
