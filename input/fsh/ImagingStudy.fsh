@@ -6,18 +6,25 @@ Description:    "Ignore, just a collection of notes."
 
 * identifier 1..* MS
 
-* basedOn ^slicing.discriminator.type = #pattern
-* basedOn ^slicing.discriminator.path = "type"
-* basedOn ^slicing.rules = #open
-* basedOn ^slicing.description = "Slice based on the type"
-* basedOn ^slicing.ordered = false
-* basedOn contains
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slice based on the type"
+* identifier ^slicing.ordered = false
+* identifier contains
   accessionNumber 0..1 MS
 
-* basedOn[accessionNumber] only Reference(ServiceRequest)
-* basedOn[accessionNumber] ^short = "Created by Imaging Test Order Workflow"
-* basedOn[accessionNumber].type 1..1 MS
-* basedOn[accessionNumber].type = "ServiceRequest"
-* basedOn[accessionNumber].identifier 1..1
-* basedOn[accessionNumber].identifier only AccessionNumber
+* identifier[accessionNumber] only Reference(ServiceRequest)
+* identifier[accessionNumber] ^short = "Created by Imaging Test Order Workflow"
+* identifier[accessionNumber].type 1..1 MS
+* identifier[accessionNumber].type = "ServiceRequest"
+* identifier[accessionNumber].identifier 1..1
+* identifier[accessionNumber].identifier only AccessionNumber
+
+* subject 1..1
+* subject.identifier 1..1
+* subject only Reference(Patient)
+* subject.identifier only NHSNumber
+
+* procedureCode from ImagingCodeNICIP (preferred)
 
