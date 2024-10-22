@@ -4,20 +4,23 @@ Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-d
 
 ### Overview
 
-| DICOM Module                                              | Usage | DICOM Reference and Link                                                                                                                                                                                                                         |
-|-----------------------------------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Patient                                                   | M     | C.7.1.1 [Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html)                                                                                                                           |
-| Specimen Identification                                   | C     | C.7.1.2 [Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html) retired?. See also [Specimen Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.22.html) |
-| [General Study](#common-study-ie-modules)                 | M     | C.7.2.1 [Common Study IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html)                                                                                                                              |
-| [Patient Study](#common-study-ie-modules)                 | U     | C.7.2.2 [Common Study IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html)                                                                                                                              |
-| [Key Object Document Series](#key-object-document-series) | M     | C.17.6.1 [Key Object Document Series](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.6.html)                                                                                                                         |
-| General Equipment                                         | M     | C.7.5.1 [Common Equipment IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.5.html)                                                                                                                          |
-| [Key Object Document Module](#key-object-document-module) | M     | C.17.6.2 [Key Object Document Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)                                                                                                                       |
-| SR Document Content                                       | M     | C.17.3  [SR Document Content Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.3.html)                                                                                                                          |
-| SOP Common                                                | M     | C.12.1 [General Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html)                                                                                                                                        |
+| DICOM Module                                                            | Usage | DICOM Reference and Link                                                                                                                                                                                                                         |
+|-------------------------------------------------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Patient                                                                 | M     | C.7.1.1 [Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html)                                                                                                                           |
+| Specimen Identification                                                 | C     | C.7.1.2 [Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html) retired?. See also [Specimen Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.22.html) |
+| [General Study](#common-study-ie-modules)                               | M     | C.7.2.1 [Common Study IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html)                                                                                                                              |
+| [Patient Study](#common-study-ie-modules)                               | U     | C.7.2.2 [Common Study IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html)                                                                                                                              |
+| [Key Object Document Series](#key-object-document-series)               | M     | C.17.6.1 [Key Object Document Series](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.6.html)                                                                                                                         |
+| General Equipment                                                       | M     | C.7.5.1 [Common Equipment IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.5.html)                                                                                                                          |
+| [Key Object Document Module](#key-object-document-module)               | M     | C.17.6.2 [Key Object Document Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)                                                                                                                       |
+| [SR Document Content](#key-object-document-directory-record-definition) | M     | C.17.3  [SR Document Content Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.3.html)                                                                                                                          |
+| SOP Common                                                              | M     | C.12.1 [General Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html)                                                                                                                                        |
+
 
 
 #### Common Study IE Modules
+
+C.7.2.1 [Common Study IE Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html)
 
 | Attribute Name                                                      | Tag         | Type | Attribute Description                                                                                                                                                                                                                                                                                    | FHIR ImagingStudy       | NHS Data Dictionary                          |
 |---------------------------------------------------------------------|-------------|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|----------------------------------------------|
@@ -58,6 +61,8 @@ Note
 
 #### Key Object Document Series
 
+C.17.6.1 [Key Object Document Series](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.6.html)
+
 | Attribute Type                      | Tag         | Type | Description                                                                                                                                                                                                                                | FHIR ImagingStudy |
 |-------------------------------------|-------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | Modality                            | (0008,0060) | 1    | Modality type. <br/> Enumerated Value: <br/> KO = Key Object Selection                                                                                                                                                                     | series.modality   |
@@ -68,6 +73,8 @@ Note
 | > Referenced SOP Instance UID       | (0008,1155) | 1C   | Uniquely identifies the referenced SOP Instance.<br/> Required if Referenced Study Component Sequence (0008,1111) is sent.                                                                                                                 |                   |
 
 #### Key Object Document Module
+
+C.17.6.2 [Key Object Document Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)
 
 | Attribute Name                                       | Tag         | Type | Description                                                                                                                                                                                       | FHIR ImagingStudy      | NHS Data Dictionary |
 |------------------------------------------------------|-------------|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|---------------------|
@@ -90,6 +97,8 @@ Note
 | >Include 'SOP Instance Reference Macro' Table C.17-3 |             |      |                                                                                                                                                                                                   |                        |                     |
 
 #### Key Object Document Directory Record Definition
+
+C.17.3  [SR Document Content Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.3.html)
 
 | Key                                      | Tag         | Type | Type                                                                                                                                                                                                                         |
 |------------------------------------------|-------------|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
