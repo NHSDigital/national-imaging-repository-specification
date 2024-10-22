@@ -5,7 +5,16 @@ Title:          "Medical Record Number"
 Description:     """
 Only use in References if the NHS Number is not known or unverified.
 
-This is equivalent to HL7 v2 CX Data Type used in PID segments for MR
+| Standard | Data Type | Value |
+|----------|-------|-------|
+| NHS Data Dictionary | | - |
+| OID/HL7 v3 | |  |
+| HL7 v2 | CX.4|   |
+| HL7 FHIR | Identifier.system |  |
+| HL7 v2 | CX.5 | MR |
+| HL7 FHIR | Identifier.type | http://terminology.hl7.org/CodeSystem/v2-0203#MR |
+| HL7 v2 | CX.6 | ODS Code |
+| HL7 FHIR | Identifier.assigner.identifier | https://fhir.nhs.uk/Id/ods-organization-code#{ODS Code} |
 
 """
 

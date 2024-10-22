@@ -4,18 +4,17 @@ See [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ft
 
 ### Overview
 
-| DICOM Module                                                                                                      | Usage | DICOM Link |
-|-------------------------------------------------------------------------------------------------------------------|-------|------------
-| Patient                                                                                                           | M     | |
-| Specimen Identification                                                                                           | C     |  |
-| General Study                                                                                                     | M     | |
-| Patient Study                                                                                                     | U     | |
-| [Key Object Document Series](#key-object-document-series)                                                                                  | M     | [Key Object Document Series](https://dicom.nema.org/medical/dicom/2020a/output/chtml/part03/sect_C.17.6.html)  |
-| General Equipment                                                                                                 | M     |  |
-| [Key Object Document Module](#key-object-document-module) | M     | [Key Object Document Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html) |
-| SR Document Content                                                                                               | M     |  |
-| SOP Common                                                                                                        | M     | |
-
+| DICOM Module                                              | Usage | DICOM Reference and Link                                                                                               |
+|-----------------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------
+| Patient                                                   | M     | C.7.1.1                                                                                                                |
+| Specimen Identification                                   | C     | C.7.1.2                                                                                                                |
+| General Study                                             | M     | C.7.2.1                                                                                                                |
+| Patient Study                                             | U     | C.7.2.2                                                                                                                |
+| [Key Object Document Series](#key-object-document-series) | M     | C.17.6.1 [Key Object Document Series](https://dicom.nema.org/medical/dicom/2020a/output/chtml/part03/sect_C.17.6.html) |
+| General Equipment                                         | M     | C.7.5.1                                                                                                                |
+| [Key Object Document Module](#key-object-document-module) | M     | C.17.6.2 [Key Object Document Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)     |
+| SR Document Content                                       | M     | C.17.3                                                                                                                       |
+| SOP Common                                                | M     | C.12.1                                                                                                                       |
 
 
 #### Key Object Document Series
@@ -41,7 +40,7 @@ See [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ft
 | >Referenced Study Sequence                           | (0008,1110) | 2    | Uniquely identifies the Study SOP Instance.<br/>Only a single Item shall be permitted in this sequence.                                                                                           |                        |                     |
 | >>Referenced SOP Class UID                           | (0008,1150) | 1    | Uniquely identifies the SOP Class                                                                                                                                                                 |                        |                     |
 | >>Referenced SOP Instance UID                        | (0008,1155) | 1    | Uniquely identifies the SOP Instance.                                                                                                                                                             |                        |                     |
-| >Accession Number                                    | (0008,0050) | 2    | A departmental IS generated number which identifies the order for the Study.                                                                                                                      | basedOn.identifier     | [RADIOLOGICAL ACCESSION NUMBER](https://www.datadictionary.nhs.uk/data_elements/radiological_accession_number.html)                     |
+| >Accession Number                                    | (0008,0050) | 2    | A departmental IS generated number which identifies the order for the Study.                                                                                                                      | basedOn.identifier     | [RADIOLOGICAL ACCESSION NUMBER](StructureDefinition-accession-number.html)                     |
 | >Placer Order Number/Imaging Service Request         | (0040,2016) | 2    | The order number assigned to the Imaging Service Request by the party placing the order.                                                                                                          |                        |                     |
 | >Filler Order Number/Imaging Service Request         | (0040,2017) | 2    | The order number assigned to the Imaging Service Request by the party filling the order.                                                                                                          |                        |                     |
 | >Requested Procedure ID                              | (0040,1001) | 2    | Identifier of the related Requested Procedure                                                                                                                                                     |                        |                     |
@@ -50,3 +49,15 @@ See [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ft
 | >>Include 'Code Sequence Macro' Table 8.8-1          |             |      | No Baseline Context ID Number is specified.                                                                                                                                                       |                        |                     |
 | Current Requested Procedure Evidence Sequence        | (0040,A375) | 1    | List of all Composite SOP Instances referenced in the Content Sequence (0040,A730). One or more Items shall be included in this sequence.                                                         |                        |                     |  
 | >Include 'SOP Instance Reference Macro' Table C.17-3 |             |      |                                                                                                                                                                                                   |                        |                     |
+
+#### Key Object Document Directory Record Definition
+
+| Key                                      | Tag         | Type | Type                                                                                                                                                                                                                         |
+|------------------------------------------|-------------|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Specific Character Set                   | (0008,0005) | 1C   | Required if an extended or replacement character set is used in one of the keys.                                                                                                                                             |
+| Instance Number                          | (0020,0013) | 1    |                                                                                                                                                                                                                              |
+| Content Date                             | (0008,0023) | 1    |                                                                                                                                                                                                                              | 
+| Content Time                             | (0008,0033) | 1    |                                                                                                                                                                                                                              |
+| Concept Name Code Sequence               | (0040,A043) | 1    | Code describing the concept represented by the root Content Item (Document Title). This sequence shall contain exactly one Item.                                                                                             |
+| Content Sequence                         | (0040,A730) | 1C   | Contains the Target Content Items that modify the Concept Name Code Sequence of the root Content Item (Document Title). <br/> Required if the root Content Item is the Source Content Item of HAS CONCEPT MOD relationships. |
+| Any Attribute of the Document IE Modules |             | 3    |                                                                                                                                                                                                                              | 
