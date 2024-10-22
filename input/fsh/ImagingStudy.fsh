@@ -14,10 +14,6 @@ Description:    "Ignore, just a collection of notes."
 * identifier contains
   accessionNumber 0..1 MS
 
-* identifier[accessionNumber] only Reference(ServiceRequest)
-* identifier[accessionNumber] ^short = "Created by Imaging Test Order Workflow"
-* identifier[accessionNumber].type 1..1 MS
-* identifier[accessionNumber].type = "ServiceRequest"
 * identifier[accessionNumber].identifier 1..1
 * identifier[accessionNumber].identifier only AccessionNumber
 
