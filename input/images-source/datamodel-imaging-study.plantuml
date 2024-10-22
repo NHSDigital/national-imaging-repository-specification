@@ -1,0 +1,35 @@
+@startuml
+
+class ImagingStudy {
+series 0..*
+}
+note right
+DICOM
+Study Metadata
+GET /studies/{study}/metadata
+end note
+
+
+
+class Series {
+instance 0..*
+}
+note right
+DICOM
+Series Metadata
+GET /studies/{study}/series/{series}/metadata
+end note
+
+
+class Instance
+note right
+DICOM
+Instance Metadata
+GET /studies/{study}/series/{series}/instances/{instance}/metadata
+end note
+
+
+ImagingStudy "series" --> Series
+Series "instance" --> Instance
+
+@enduml

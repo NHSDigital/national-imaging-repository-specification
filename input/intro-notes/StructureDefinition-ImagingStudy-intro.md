@@ -1,3 +1,12 @@
+
+## Entity Model
+
+<figure>
+{%include component-imaging-study.svg%}
+<p id="fX.X.X.X-X" class="figureTitle">Entity Diagnostic Report</p>
+</figure>
+<br clear="all">
+
 ## Entity Mapping
 
 Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf)
