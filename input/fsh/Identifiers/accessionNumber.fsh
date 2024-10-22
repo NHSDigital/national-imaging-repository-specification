@@ -6,7 +6,7 @@ Description:     """
 
 | Data Item | Standard | Data Type | Value |
 |----------|-------|-------|-------|
-| Radiological Accession Number | NHS Data Dictionary | | [RADIOLOGICAL ACCESSION NUMBER](https://www.datadictionary.nhs.uk/data_elements/radiological_accession_number.html) |
+| [RADIOLOGICAL ACCESSION NUMBER](https://www.datadictionary.nhs.uk/data_elements/radiological_accession_number.html) | NHS Data Dictionary | |  |
 | | DICOM | (0008,0050) | {value} |
 | |HL7 FHIR | Identifier.value | {value} |
 | |IHE XDS  | DocumentEntry.referenceIdList | {value} using HL7 v2 CX format? |
