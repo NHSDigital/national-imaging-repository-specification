@@ -22,7 +22,7 @@ Users should also review this analysis in conjunction with [IHE Interactive Mult
   accessionNumber 0..1 MS
 
 * basedOn[accessionNumber] only Reference(ServiceRequest)
-* basedOn[accessionNumber] ^short = "IHE IMR DiagnosticReport calls this serviceRequest"
+* basedOn[accessionNumber] ^short = "Created by Imaging Test Order Workflow"
 * basedOn[accessionNumber].type 1..1 MS
 * basedOn[accessionNumber].type = "ServiceRequest"
 * basedOn[accessionNumber].identifier 1..1
