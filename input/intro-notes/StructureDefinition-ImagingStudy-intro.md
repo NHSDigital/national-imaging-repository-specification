@@ -16,7 +16,19 @@ Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-d
 | [SR Document Content](#key-object-document-directory-record-definition) | M     | C.17.3  [SR Document Content Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.3.html)                                                                                                                          |
 | SOP Common                                                              | M     | C.12.1 [General Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html)                                                                                                                                        |
 
+#### Common Composite IOD Modules
 
+[Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html)
+
+(Extract)
+
+| Attribute Name | Tag         | Type | Attribute Description               | FHIR ImagingStudy       | NHS Data Dictionary |
+|----------------|-------------|------|-------------------------------------|-------------------------|---------------------|
+| Patient's Name | (0010,0010) | 2    | Patient's full name.                | subject.display         |                     | 
+| Patient ID     | (0010,0020) | 2    | Primary identifier for the Patient. | suject.identifier.value | [NHS NUMBER](StructureDefinition-nhs-number.html)                     |
+
+Note
+In the case of imaging a group of small animals simultaneously, the single value of this identifier corresponds to the identification of the entire group. See also Section C.7.1.4.1.1.
 
 #### Common Study IE Modules
 
