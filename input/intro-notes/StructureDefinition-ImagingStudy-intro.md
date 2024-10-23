@@ -21,6 +21,7 @@ This document is concerned only the entity model for **Imaging Study** (from [EU
 
 > An imaging study comprises a set of objects, including images and other objects, that were made for a specific purpose and usually in response to a request from a healthcare provider. The Imaging Study does not include the Imaging Report as defined in this guideline.
 
+Note: Developer Tip. Most of the interactions and payloads can be viewed/inspected by going to [Medical Connections - DICOM WebViewer](https://dicomwebviewer.medicalconnections.co.uk/studies/) using a browsers development tools.
 
 ## Imaging Study Domain Model
 
