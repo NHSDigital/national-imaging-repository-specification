@@ -32,7 +32,9 @@ For modelling purposes [FHIR ImagingStudy](https://hl7.org/fhir/R4/imagingstudy.
 </figure>
 <br clear="all">
 
-TODO
+ - [DICOM JSON Model](https://dicom.nema.org/medical/dicom/current/output/html/part18.html#chapter_F) from RAD-107
+   - Instance Resource [Section 10.4.1.1.1](https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.1.1.1)
+   - Metadata Resource [Section 10.4.1.1.2](https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.1.1.2)
 
 ## DICOM Key Object Selection (KOS) Domain Model
 
