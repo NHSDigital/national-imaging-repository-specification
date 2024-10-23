@@ -2,7 +2,7 @@
 The NIR Alpha Technical Specification recommends using [DICOM Retrieve (WADO-RS)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri).
 
 <figure>
-<img style="max-width: 90%" alt="Linking NRL pointers to WADO-RS APIs" src="Alpha-DICOM.png"/>
+<img style="max-width: 50%" alt="Linking NRL pointers to WADO-RS APIs" src="Alpha-DICOM.png"/>
 <p id="fX.X.X.X-X" class="figureTitle">Linking NRL pointers to WADO-RS APIs</p>
 </figure>
 <br clear="all"/>
