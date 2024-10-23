@@ -1,6 +1,6 @@
 @startuml
 
-class ImagingStudy {
+class ImagingStudy <<aggregate root>> {
 series 0..*
 }
 note right
@@ -11,7 +11,7 @@ end note
 
 
 
-class Series {
+class Series <<entity>> {
 instance 0..*
 }
 note right
@@ -21,7 +21,7 @@ GET /studies/{study}/series/{series}/metadata
 end note
 
 
-class Instance
+class Instance  <<entity>>
 note right
 DICOM
 Instance Metadata
