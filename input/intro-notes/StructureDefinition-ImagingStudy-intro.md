@@ -1,17 +1,38 @@
 
-## Entity Model
+The NIR Alpha Technical Specification recommends using [DICOM Retrieve (WADO-RS)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri).
 
+<figure>
+<img style="max-width: 90%" alt="Linking NRL pointers to WADO-RS APIs" src="Alpha-DICOM.png"/>
+<p id="fX.X.X.X-X" class="figureTitle">Linking NRL pointers to WADO-RS APIs</p>
+</figure>
+<br clear="all"/>
+
+In IHE Radiology (RAD) Domain this is:
+
+- [IHE Radiology (RAD) Technical Framework Volume 1 Integration Profiles](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf) - DICOM Retrieve by WADO-RS Option
+- [IHE Radiology (RAD) Technical Framework Volume 2 Transactions](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) - WADO-RS Retrieve [RAD-107].
+
+IHE UK are also suggesting the using of [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf) as an alternative, which in IHE Radiology (RAD) is:
+
+- [IHE Radiology (RAD) Technical Framework Volume 1 Integration Profiles](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf) - NOT FOUND
+- [IHE Radiology (RAD) Technical Framework Volume 2 Transactions](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) - Retrieve Key Image Notes [RAD-31] CHECK 
+
+This document is concerned only the entity model for **Imaging Study** which is defined in []() as 
+
+> An imaging study comprises a set of objects, including images and other objects, that were made for a specific purpose and usually in response to a request from a healthcare provider. The Imaging Study does not include the Imaging Report as defined in this guideline.
+
+## Imaging Study Domain Model
+
+For modelling purposes [FHIR ImagingStudy](https://hl7.org/fhir/R4/imagingstudy.html) is being used, this does not mean FHIR should be used for the implementation. It is being used as a modellng tool, this also enables cross-referencing with other models which again can be implemented in a variety of standards but here are modelled using HL7 FHIR.  
 <figure>
 {%include datamodel-imaging-study.svg%}
 <p id="fX.X.X.X-X" class="figureTitle">Entity Diagnostic Report</p>
 </figure>
 <br clear="all">
 
-## Entity Mapping
+TODO
 
-Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf)
-
-### Overview
+## DICOM Key Object Selection (KOS) Domain Model
 
 | DICOM Module                                                            | Usage | DICOM Reference and Link                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -24,6 +45,10 @@ Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-d
 | [Key Object Document Module](#key-object-document-module)               | M     | C.17.6.2 [Key Object Document Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)                                                                                                                       |
 | [SR Document Content](#key-object-document-directory-record-definition) | M     | C.17.3  [SR Document Content Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.3.html)                                                                                                                          |
 | SOP Common                                                              | M     | C.12.1 [General Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html)                                                                                                                                        |
+
+### Entity Mapping
+
+Based on [DICOM Key Object Selection (KOS)](https://www.dicomstandard.org/News-dir/ftsup/docs/sups/sup59.pdf)
 
 #### Common Composite IOD Modules
 
