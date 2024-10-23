@@ -36,9 +36,16 @@ For modelling purposes [FHIR ImagingStudy](https://hl7.org/fhir/R4/imagingstudy.
    - Instance Resource [Section 10.4.1.1.1](https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.1.1.1)
    - Metadata Resource [Section 10.4.1.1.2](https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.1.1.2)
 
+- [Study Root Query/Retrieve Information Model](https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_c.6.2.html)
+
+List of DICOM IOD Modules (this appears to be used also in DICOM KOS)
+[Composite Information Object Definitions (Normative)](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/chapter_A.html)
+
 ## DICOM Key Object Selection (KOS) Domain Model
 
-| DICOM Module                                                            | Usage | DICOM Reference and Link                                                                                                                                                                                                                         |
+Should this be this [Key Object Selection Document IOD Module Table](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.35.4.3.html)
+
+| DICOM IOD Module                                                        | Usage | DICOM Reference and Link                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Patient                                                                 | M     | C.7.1.1 [Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html)                                                                                                                           |
 | Specimen Identification                                                 | C     | C.7.1.2 [Common Composite IOD Modules](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.7.html) retired?. See also [Specimen Module](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.22.html) |
