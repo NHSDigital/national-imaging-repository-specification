@@ -17,9 +17,10 @@ IHE UK are also suggesting the using of [DICOM Key Object Selection (KOS)](https
 - [IHE Radiology (RAD) Technical Framework Volume 1 Integration Profiles](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf) - NOT FOUND
 - [IHE Radiology (RAD) Technical Framework Volume 2 Transactions](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) - Retrieve Key Image Notes [RAD-31] CHECK 
 
-This document is concerned only the entity model for **Imaging Study** which is defined in []() as 
+This document is concerned only the entity model for **Imaging Study** (from [EU eHealth Network - Medical imaging studies and reports](https://health.ec.europa.eu/document/download/0079ad26-8f8f-435b-9472-3cd8625f4220_en?filename=ehn_mi_guidelines_en.pdf)) as 
 
 > An imaging study comprises a set of objects, including images and other objects, that were made for a specific purpose and usually in response to a request from a healthcare provider. The Imaging Study does not include the Imaging Report as defined in this guideline.
+
 
 ## Imaging Study Domain Model
 
