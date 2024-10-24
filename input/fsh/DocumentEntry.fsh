@@ -22,6 +22,16 @@ At present this is not based on [UK Core DocumentReference](https://simplifier.n
 
 * context.related 1..*
 
+* context.event ^slicing.discriminator.type = #pattern
+* context.event ^slicing.discriminator.path = "type"
+* context.event ^slicing.rules = #open
+* context.event ^slicing.description = "Slice based on the type"
+* context.event ^slicing.ordered = false
+
+* context.event contains modality 0..* and anatomicRegion 0..* and ImagingProcedure 0..*
+* context.event[modality] from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html
+
+
 * context.related ^slicing.discriminator.type = #pattern
 * context.related ^slicing.discriminator.path = "type"
 * context.related ^slicing.rules = #open
